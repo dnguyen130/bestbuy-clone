@@ -1,0 +1,29 @@
+.header {
+  background-color: var(--blue);
+  width: 100%;
+  height: 150px;
+  color: var(--white);
+}
+
+.header ul {
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 8px 0 4px;
+  cursor: pointer;
+}
+
+.header li {
+  padding: 0 8px;
+}
+
+.header li:hover {
+  text-decoration: underline;
+}
+
+.header-content {
+  padding: 0 16px 8px;
+}

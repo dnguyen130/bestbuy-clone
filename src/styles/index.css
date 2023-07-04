@@ -1,0 +1,58 @@
+@import "normalize.css";
+@import "navbar.module.css";
+
+@font-face {
+  font-family: "HumanSans";
+  src: url("../assets/fonts/HumanSans-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HumanSans";
+  src: url("../assets/fonts/HumanSans-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HumanSans";
+  src: url("../assets/fonts/HumanSans-Medium.otf");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HumanSans";
+  src: url("../assets/fonts/HumanSans-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  /* CSS Color Variables */
+  --white: #fff;
+  --gray: #f4f6f9;
+  --darkgray: #55555a;
+  --hovergray: #e0e6ef;
+  --black: #1d252c;
+  --bannerred: #fd3031;
+  --salesred: #bb0628;
+  --blue: #0046be;
+  --darkblue: #003da6;
+  --yellow: #fff200;
+
+  font-family: HumanSans, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--black);
+  background-color: var(--white);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
