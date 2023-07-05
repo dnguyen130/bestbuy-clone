@@ -36,10 +36,62 @@
 }
 
 .searchbar {
+  font-weight: 300;
+  font-size: 14px;
   background-color: var(--white);
+  color: var(--black);
+  padding: 10px 0 10px 10px;
   max-width: 460px;
-  height: 40px;
-  border-radius: 2px;
+  height: 48px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.searchbox {
+  font-weight: 300;
+  font-size: 14px;
+  background-color: var(--white);
+  color: var(--black);
+  max-width: 460px;
+  height: 48px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 48px 48px;
+}
+
+.searchbar:focus {
+  outline: none;
+}
+
+.searchbutton {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.searchclose {
+  color: var(--searchgray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.searchline {
+  background-color: var(--searchgray);
+  width: 1px;
+  border-radius: 100px;
+  height: 60%;
+  position: absolute;
+  right: 0;
 }
 
 .primarylink {
@@ -77,6 +129,56 @@
   }
 }
 
+.bottombar {
+  width: 100%;
+  height: 56px;
+  background-color: var(--darkblue);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.searchlink {
+  display: flex;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.searchlink:first-child {
+  margin-left: 0;
+}
+
+.searchgroup {
+  display: flex;
+}
+
+.searcharrow {
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.searchmenu {
+  height: 100%;
+  display: none;
+  cursor: pointer;
+}
+
+.searchburger {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.searchmenu h3 {
+  margin: 0 0 0 10px;
+}
+
+.short {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .header ul {
     padding: 8px 0 4px;
@@ -84,5 +186,33 @@
 
   .header-content {
     padding: 0 16px 8px;
+  }
+
+  .searchgroup {
+    display: none;
+  }
+
+  .bottombar {
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+  }
+
+  .searchmenu {
+    display: flex;
+  }
+
+  .long {
+    display: none;
+  }
+
+  .short {
+    display: grid;
+    max-width: 100%;
+  }
+
+  .header-mainrow {
+    display: flex;
+    justify-content: space-between;
   }
 }
