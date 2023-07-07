@@ -3,7 +3,7 @@ import { IoStorefront } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { BsCart3, BsSearch } from "react-icons/bs";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
@@ -45,6 +45,8 @@ export default function Navbar(): ReactElement {
   const [searchFocus, setSearchFocus] = useState(false);
   const [activeSearchButton, setActiveSearchButton] = useState("");
 
+  console.log(searchQuery, searchQuery !== "");
+
   useEffect(() => {
     if (searchQuery !== "" && searchFocus) {
       setIsTyping(true);
@@ -77,10 +79,19 @@ export default function Navbar(): ReactElement {
             />
             <motion.div
               className="searchclose"
+              style={{ pointerEvents: !searchQuery ? "none" : "auto" }}
+              initial={{
+                opacity: 0,
+                x: 10,
+              }}
               animate={{
                 opacity: isTyping ? 1 : 0,
                 x: isTyping ? 0 : 10,
                 cursor: isTyping ? "pointer" : "auto",
+              }}
+              exit={{
+                x: 10,
+                opacity: 0,
               }}
               transition={{ ease: "linear", duration: 0.2 }}
             >
@@ -122,6 +133,9 @@ export default function Navbar(): ReactElement {
         </div>
         <div
           className="searchmenu"
+          style={{
+            opacity: searchFocus ? 0 : 1,
+          }}
           onClick={() =>
             setActiveSearchButton(
               activeSearchButton === "burger" ? "" : "burger"
@@ -130,9 +144,9 @@ export default function Navbar(): ReactElement {
         >
           <div className="searchburger">
             {activeSearchButton !== "burger" ? (
-              <RxHamburgerMenu size="50%" />
+              <RxHamburgerMenu size="100%" />
             ) : (
-              <MdOutlineClose size="50%" />
+              <MdOutlineClose size="100%" />
             )}
             <h3 className="searchtitle">Menu</h3>
           </div>
@@ -149,10 +163,19 @@ export default function Navbar(): ReactElement {
           />
           <motion.div
             className="searchclose"
+            style={{ pointerEvents: !searchQuery ? "none" : "auto" }}
+            initial={{
+              opacity: 0,
+              x: 10,
+            }}
             animate={{
               opacity: isTyping ? 1 : 0,
               x: isTyping ? 0 : 10,
               cursor: isTyping ? "pointer" : "auto",
+            }}
+            exit={{
+              x: 10,
+              opacity: 0,
             }}
             transition={{ ease: "linear", duration: 0.2 }}
           >
@@ -162,6 +185,12 @@ export default function Navbar(): ReactElement {
           <div className="searchbutton">
             <BsSearch size="40%" />
           </div>
+        </div>
+        <div
+          className="searchcancel"
+          style={{ width: searchFocus ? 60 : 0, opacity: searchFocus ? 1 : 0 }}
+        >
+          Cancel
         </div>
       </div>
     </header>
