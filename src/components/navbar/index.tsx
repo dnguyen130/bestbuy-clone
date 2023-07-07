@@ -3,7 +3,7 @@ import { IoStorefront } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { BsCart3, BsSearch } from "react-icons/bs";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
@@ -65,7 +65,18 @@ export default function Navbar(): ReactElement {
         </ul>
         <div className="header-mainrow">
           <a aria-label="Best Buy Clone" href="/" target="_self">
-            <img src="bestbuy_logo.svg" width="82" height="48" />
+            <img
+              className="desktop"
+              src="bestbuy_logo.svg"
+              width="82"
+              height="48"
+            />
+            <img
+              className="mobile"
+              src="bestbuy_logo.svg"
+              width="55"
+              height="32"
+            />
           </a>
           <div className="searchbox long">
             <input
@@ -108,9 +119,16 @@ export default function Navbar(): ReactElement {
           <div className="primarylink-container">
             {Object.values(PrimaryLinks).map((o) => {
               return (
-                <div className="primarylink">
+                <div className="primarylink desktop">
                   <div className="primarylink-icon">{o.icon}</div>
                   <div className="primarylink-title">{o.title}</div>
+                </div>
+              );
+            })}
+            {Object.values(PrimaryLinks).map((o) => {
+              return (
+                <div className="primarylink mobile">
+                  <div className="primarylink-icon">{o.icon}</div>
                 </div>
               );
             })}
@@ -131,66 +149,132 @@ export default function Navbar(): ReactElement {
             );
           })}
         </div>
-        <div
-          className="searchmenu"
-          style={{
-            opacity: searchFocus ? 0 : 1,
-          }}
-          onClick={() =>
-            setActiveSearchButton(
-              activeSearchButton === "burger" ? "" : "burger"
-            )
-          }
-        >
-          <div className="searchburger">
-            {activeSearchButton !== "burger" ? (
-              <RxHamburgerMenu size="100%" />
-            ) : (
-              <MdOutlineClose size="100%" />
-            )}
-            <h3 className="searchtitle">Menu</h3>
-          </div>
-        </div>
-        <div className="searchbox short">
-          <input
-            placeholder="Search Best Buy"
-            type="text"
-            className="searchbar"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onFocus={() => setSearchFocus(true)}
-            onBlur={() => setSearchFocus(false)}
-          />
-          <motion.div
-            className="searchclose"
-            style={{ pointerEvents: !searchQuery ? "none" : "auto" }}
-            initial={{
-              opacity: 0,
-              x: 10,
+        <div className="mobilesearchgroup">
+          <div
+            className="searchmenu"
+            style={{
+              opacity: searchFocus ? 0 : 1,
+              width: searchFocus ? 0 : 40,
             }}
-            animate={{
-              opacity: isTyping ? 1 : 0,
-              x: isTyping ? 0 : 10,
-              cursor: isTyping ? "pointer" : "auto",
-            }}
-            exit={{
-              x: 10,
-              opacity: 0,
-            }}
-            transition={{ ease: "linear", duration: 0.2 }}
+            onClick={() =>
+              setActiveSearchButton(
+                activeSearchButton === "burger" ? "" : "burger"
+              )
+            }
           >
-            <AiFillCloseCircle size="40%" onClick={() => setSearchQuery("")} />
-            <div className="searchline" />
-          </motion.div>
-          <div className="searchbutton">
-            <BsSearch size="40%" />
+            <div className="searchburger">
+              {activeSearchButton !== "burger" ? (
+                <RxHamburgerMenu size="100%" />
+              ) : (
+                <MdOutlineClose size="100%" />
+              )}
+              <h3 className="searchtitle">Menu</h3>
+            </div>
+          </div>
+          <div className="searchbox short">
+            <input
+              placeholder="Search Best Buy"
+              type="text"
+              className="searchbar"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setSearchFocus(true)}
+              onBlur={() => setSearchFocus(false)}
+            />
+            <motion.div
+              className="searchclose"
+              style={{ pointerEvents: !searchQuery ? "none" : "auto" }}
+              initial={{
+                opacity: 0,
+                x: 10,
+              }}
+              animate={{
+                opacity: isTyping ? 1 : 0,
+                x: isTyping ? 0 : 10,
+                cursor: isTyping ? "pointer" : "auto",
+              }}
+              exit={{
+                x: 10,
+                opacity: 0,
+              }}
+              transition={{ ease: "linear", duration: 0.2 }}
+            >
+              <AiFillCloseCircle
+                size="40%"
+                onClick={() => setSearchQuery("")}
+              />
+              <div className="searchline" />
+            </motion.div>
+            <div className="searchbutton">
+              <BsSearch size="40%" />
+            </div>
+          </div>
+          <div
+            className="searchcancel"
+            style={{
+              width: searchFocus ? 60 : 0,
+              opacity: searchFocus ? 1 : 0,
+            }}
+          >
+            Cancel
           </div>
         </div>
-        <div
-          className="searchcancel"
-          style={{ width: searchFocus ? 60 : 0, opacity: searchFocus ? 1 : 0 }}
-        >
-          Cancel
+        <div className="desktopsearchgroup">
+          <div
+            className="searchmenu"
+            onClick={() =>
+              setActiveSearchButton(
+                activeSearchButton === "burger" ? "" : "burger"
+              )
+            }
+          >
+            <div className="searchburger">
+              {activeSearchButton !== "burger" ? (
+                <RxHamburgerMenu size="100%" />
+              ) : (
+                <MdOutlineClose size="100%" />
+              )}
+              <h3 className="searchtitle">Menu</h3>
+            </div>
+          </div>
+          <div className="searchbox short">
+            <input
+              placeholder="Search Best Buy"
+              type="text"
+              className="searchbar"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setSearchFocus(true)}
+              onBlur={() => setSearchFocus(false)}
+            />
+            <motion.div
+              className="searchclose"
+              style={{ pointerEvents: !searchQuery ? "none" : "auto" }}
+              initial={{
+                opacity: 0,
+                x: 10,
+              }}
+              animate={{
+                opacity: isTyping ? 1 : 0,
+                x: isTyping ? 0 : 10,
+                cursor: isTyping ? "pointer" : "auto",
+              }}
+              exit={{
+                x: 10,
+                opacity: 0,
+              }}
+              transition={{ ease: "linear", duration: 0.2 }}
+            >
+              <AiFillCloseCircle
+                size="40%"
+                onClick={() => setSearchQuery("")}
+              />
+              <div className="searchline" />
+            </motion.div>
+            <div className="searchbutton">
+              <BsSearch size="40%" />
+            </div>
+          </div>
         </div>
       </div>
     </header>

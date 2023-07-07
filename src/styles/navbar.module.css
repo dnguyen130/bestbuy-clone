@@ -33,6 +33,7 @@
   grid-template-columns: 82px 1fr 410px;
   column-gap: 32px;
   align-items: center;
+  min-height: 56px;
 }
 
 .searchbox {
@@ -107,7 +108,6 @@
 }
 
 .primarylink-container {
-  min-width: 410px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -177,6 +177,28 @@
 }
 
 .searchcancel {
+  display: none;
+}
+
+.mobilesearchgroup {
+  display: none;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+.desktopsearchgroup {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+.desktop {
+  display: flex;
+}
+
+.mobile {
   display: none;
 }
 
@@ -258,5 +280,25 @@
     transition: 0.3s;
     overflow: hidden;
     cursor: pointer;
+  }
+
+  .mobilesearchgroup {
+    display: flex;
+  }
+
+  .desktopsearchgroup {
+    display: none;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  .header-content {
+    padding: 0 0 0 16px;
   }
 }
