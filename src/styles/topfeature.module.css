@@ -1,0 +1,82 @@
+.topcont {
+  width: 100%;
+  min-height: 376px;
+  background: var(--darkerblue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-sizing: border-box;
+  padding: 24px 64px;
+}
+
+.topcont figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  margin: 0 50px 0 0;
+}
+
+.topcont img {
+  max-height: 250px;
+
+  width: 100%;
+}
+
+.topcont caption {
+  font-size: 32px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.topcont h4 {
+  margin: 0;
+}
+
+.topcontcountdown {
+  color: var(--yellow);
+  font-size: 72px;
+  font-weight: bold;
+}
+
+.topcontbutton {
+  background-color: var(--white);
+  color: var(--darkblue);
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 2px;
+}
+
+.topcont p {
+  font-size: 12px;
+  text-align: left;
+  font-weight: 300;
+}
+
+.topcont .column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .topcont {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px 32px;
+  }
+
+  .topcont .column {
+    align-items: center;
+  }
+
+  .topcont figure {
+    margin: 0;
+  }
+
+  .topcont p {
+    text-align: center;
+  }
+}

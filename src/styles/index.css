@@ -1,5 +1,6 @@
 @import "normalize.css";
 @import "navbar.module.css";
+@import "topfeature.module.css";
 
 @font-face {
   font-family: "HumanSans";
@@ -41,6 +42,7 @@
   --salesred: #bb0628;
   --blue: #0046be;
   --darkblue: #003da6;
+  --darkerblue: #011f72;
   --yellow: #fff200;
 
   font-family: HumanSans, system-ui, Avenir, Helvetica, Arial, sans-serif;

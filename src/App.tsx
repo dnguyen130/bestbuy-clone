@@ -1,10 +1,13 @@
 import Navbar from "./components/navbar";
+import TopFeature from "./components/topfeature";
 
 function App() {
   return (
     <div className="AppContainer">
       <Navbar />
-      <main></main>
+      <main>
+        <TopFeature />
+      </main>
     </div>
   );
 }
