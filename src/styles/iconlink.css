@@ -1,11 +1,11 @@
 .iconlinkgrid {
-  display: grid;
-  grid-template-columns: 285px 285px;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  justify-content: center;
   column-gap: 30px;
   row-gap: 10px;
   margin-top: 30px;
   align-items: center;
+  margin-bottom: 64px;
 }
 
 .iconlinkcont {
@@ -38,11 +38,24 @@
 .iconlinkcont p {
   color: var(--black);
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 768px) {
   .iconlinkgrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: flex-start;
+  }
+
+  .iconlinkcont {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .iconlinkgrid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: flex-start;

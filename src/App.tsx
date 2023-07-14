@@ -6,6 +6,7 @@ import { TbClockBolt } from "react-icons/tb";
 import { AiOutlineDollar } from "react-icons/ai";
 import { FaTruckFast } from "react-icons/fa6";
 import { BsPersonCircle } from "react-icons/bs";
+import CarouselCont from "./components/carouselcont";
 
 const IconLinkList = [
   {
@@ -36,12 +37,15 @@ function App() {
       <Navbar />
       <main>
         <TopFeature />
-        <div className="iconlinkgrid">
-          {IconLinkList.map((o) => {
-            return (
-              <IconLink icon={o.icon} title={o.title} subtitle={o.subtitle} />
-            );
-          })}
+        <div className="margin">
+          <div className="iconlinkgrid">
+            {IconLinkList.map((o) => {
+              return (
+                <IconLink icon={o.icon} title={o.title} subtitle={o.subtitle} />
+              );
+            })}
+          </div>
+          <CarouselCont />
         </div>
       </main>
     </div>

@@ -2,6 +2,7 @@
 @import "navbar.module.css";
 @import "topfeature.module.css";
 @import "iconlink.css";
+@import "carousel.css";
 
 @font-face {
   font-family: "HumanSans";
@@ -67,4 +68,22 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.margin {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .margin {
+    margin: 0 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .margin {
+    margin: 0;
+  }
 }

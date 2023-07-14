@@ -79,4 +79,17 @@
   .topcont p {
     text-align: center;
   }
+
+  .topcont caption {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .topcontcountdown {
+    color: var(--yellow);
+    font-size: 48px;
+    font-weight: bold;
+  }
 }

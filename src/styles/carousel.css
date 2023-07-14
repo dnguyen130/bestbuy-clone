@@ -1,0 +1,19 @@
+.carouselcont {
+  width: 100%;
+  color: white;
+  background: linear-gradient(90deg, var(--darkerblue), var(--blue));
+  display: flex;
+  padding: 24px 8px 12px 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .carouselcont {
+    padding: 24px 16px 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carouselcont {
+    padding: 0;
+  }
+}
