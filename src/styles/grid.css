@@ -1,0 +1,152 @@
+.featuregrid {
+  display: grid;
+  width: 100%;
+  gap: 24px;
+  margin-top: 24px;
+
+  grid-template: "a b b" 1fr "a c d" 1fr/2fr 1fr 1fr;
+}
+
+.gridelement {
+  width: 100%;
+  max-height: 602px;
+  box-sizing: border-box;
+}
+
+.gridelement img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+
+.gridelement:first-child {
+  grid-area: a;
+  background-color: #f4f6fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 48px 48px;
+}
+
+.gridelement:nth-child(2) {
+  grid-area: b;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.gridelement:nth-child(2) img {
+  flex-shrink: 1;
+  display: flex;
+  width: 55%;
+}
+
+.gridelement:nth-child(3) {
+  grid-area: c;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 18px 24px;
+  justify-content: flex-end;
+}
+
+.gridelement:nth-child(4) {
+  grid-area: d;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 18px 24px;
+  justify-content: flex-end;
+}
+
+.gridelement:nth-child(4) img {
+  margin: auto;
+}
+
+.gridelement h2 {
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.featurebanner {
+  margin-top: 15px;
+}
+
+.featurebanner h3 {
+  background-color: var(--blue);
+  color: var(--white);
+  text-align: center;
+  font-size: 36px;
+  margin: 0;
+  padding: 5px 15px;
+  max-width: 300px;
+}
+
+.featurebanner h4 {
+  background-color: var(--yellow);
+  color: var(--black);
+  margin: 0;
+  text-align: center;
+}
+
+.featuregrid strong {
+  color: var(--yellow);
+}
+
+.gridelement .title {
+  font-size: 24px;
+}
+
+.gridelement .subtitle {
+  font-size: 24px;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.darkbutton {
+  background-color: var(--blue);
+  border: none;
+  padding: 20px;
+}
+
+.lightbutton {
+  background-color: var(--white);
+  color: var(--blue);
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.gridelement .description {
+  color: var(--white);
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.gridelement .topdeal {
+  background-color: var(--salesred);
+  color: var(--white);
+  margin: auto;
+  font-size: 36px;
+  text-align: center;
+  line-height: 1;
+  transform: skew(-30deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 140px;
+}
+
+.gridelement .topdeal h4 {
+  transform: skew(30deg);
+}

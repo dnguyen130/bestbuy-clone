@@ -1,12 +1,10 @@
 import Navbar from "./components/navbar";
-import TopFeature from "./components/topfeature";
-import IconLink from "./components/iconlink";
+import FeatureGrid from "./components/featuregrid";
 
 import { TbClockBolt } from "react-icons/tb";
 import { AiOutlineDollar } from "react-icons/ai";
 import { FaTruckFast } from "react-icons/fa6";
 import { BsPersonCircle } from "react-icons/bs";
-import CarouselCont from "./components/carouselcont";
 
 const IconLinkList = [
   {
@@ -36,16 +34,8 @@ function App() {
     <div className="AppContainer">
       <Navbar />
       <main>
-        <TopFeature />
         <div className="margin">
-          <div className="iconlinkgrid">
-            {IconLinkList.map((o) => {
-              return (
-                <IconLink icon={o.icon} title={o.title} subtitle={o.subtitle} />
-              );
-            })}
-          </div>
-          <CarouselCont />
+          <FeatureGrid />
         </div>
       </main>
     </div>

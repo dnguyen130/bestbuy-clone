@@ -1,8 +1,7 @@
 @import "normalize.css";
 @import "navbar.module.css";
-@import "topfeature.module.css";
 @import "iconlink.css";
-@import "carousel.css";
+@import "grid.css";
 
 @font-face {
   font-family: "HumanSans";
@@ -63,7 +62,9 @@
 }
 
 main {
-  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +72,6 @@ main {
 }
 
 .margin {
-  width: 100%;
   box-sizing: border-box;
   margin: 0 24px;
 }
