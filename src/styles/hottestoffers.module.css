@@ -1,0 +1,44 @@
+.hotitle {
+  text-align: center;
+}
+
+.productboxgrid {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.productcont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productcont img {
+  max-width: 100%;
+}
+
+.boxdesc {
+  margin: 0 0 8px;
+  font-weight: bold;
+}
+
+.boxsub {
+  margin: 0 0 8px;
+  font-weight: 300;
+}
+
+.productcont .link {
+  align-self: flex-start;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.productcont .link:hover {
+  text-decoration: underline;
+}
+
+.productcont a {
+  cursor: pointer;
+}

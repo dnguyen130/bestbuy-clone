@@ -1,7 +1,9 @@
 @import "normalize.css";
 @import "navbar.module.css";
 @import "iconlink.css";
-@import "grid.css";
+@import "grid.module.css";
+@import "hottestoffers.module.css";
+@import "picks.module.css";
 
 @font-face {
   font-family: "HumanSans";

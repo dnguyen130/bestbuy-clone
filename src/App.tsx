@@ -1,10 +1,12 @@
 import Navbar from "./components/navbar";
 import FeatureGrid from "./components/featuregrid";
+import HottestOffers from "./components/hottestoffers";
 
 import { TbClockBolt } from "react-icons/tb";
 import { AiOutlineDollar } from "react-icons/ai";
 import { FaTruckFast } from "react-icons/fa6";
 import { BsPersonCircle } from "react-icons/bs";
+import PicksGrid from "./components/picks";
 
 const IconLinkList = [
   {
@@ -36,6 +38,8 @@ function App() {
       <main>
         <div className="margin">
           <FeatureGrid />
+          <HottestOffers />
+          <PicksGrid />
         </div>
       </main>
     </div>

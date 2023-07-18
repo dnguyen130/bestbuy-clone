@@ -1,0 +1,8 @@
+.pickscont {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.pickscont img {
+  width: 75%;
+}

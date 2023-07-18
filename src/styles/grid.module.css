@@ -3,6 +3,7 @@
   width: 100%;
   gap: 24px;
   margin-top: 24px;
+  margin-bottom: 64px;
 
   grid-template: "a b b" 1fr "a c d" 1fr/2fr 1fr 1fr;
 }
