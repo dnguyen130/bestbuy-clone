@@ -4,6 +4,7 @@
 @import "grid.module.css";
 @import "hottestoffers.module.css";
 @import "picks.module.css";
+@import "carousel.module.css";
 
 @font-face {
   font-family: "HumanSans";

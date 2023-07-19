@@ -32,7 +32,7 @@ export default function PicksGrid(): ReactElement {
   return (
     <div className="hocont">
       <h1 className="hotitle">Popular picks for summer</h1>
-      <div className="pickscont">
+      <div className="picksgrid">
         {Picks.map((o) => {
           return <PicksBox title={o.title} image={o.image} />;
         })}

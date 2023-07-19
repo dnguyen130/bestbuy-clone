@@ -7,6 +7,8 @@ import { AiOutlineDollar } from "react-icons/ai";
 import { FaTruckFast } from "react-icons/fa6";
 import { BsPersonCircle } from "react-icons/bs";
 import PicksGrid from "./components/picks";
+import CategoriesGrid from "./components/categories";
+import CarouselCard from "./components/carouselcard";
 
 const IconLinkList = [
   {
@@ -40,6 +42,8 @@ function App() {
           <FeatureGrid />
           <HottestOffers />
           <PicksGrid />
+          <CategoriesGrid />
+          <CarouselCard />
         </div>
       </main>
     </div>

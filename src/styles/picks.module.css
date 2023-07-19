@@ -1,8 +1,38 @@
 .pickscont {
+  display: flex;
+}
+
+.pickscont:hover .pickstitle {
+  text-decoration: underline;
+}
+
+.picksgrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  justify-items: center;
+}
+
+.pickscont a {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .pickscont img {
   width: 75%;
+  aspect-ratio: 1/1;
+  align-self: center;
+}
+
+.pickstitle {
+  margin: 16px 0 0;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+  color: var(--blue);
+}
+
+.spacedrow {
+  margin-bottom: 48px;
 }
