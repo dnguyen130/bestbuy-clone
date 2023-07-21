@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import CarouselComponent from "./carousel";
 
 export default function CarouselCard(): ReactElement {
   return (
@@ -15,6 +16,9 @@ export default function CarouselCard(): ReactElement {
           Experience outstanding deals on refurbished and open box products.
         </p>
         <button className="darkbutton">Shop deals</button>
+      </div>
+      <div className="carouselcont">
+        <CarouselComponent />
       </div>
     </div>
   );

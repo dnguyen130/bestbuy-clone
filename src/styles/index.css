@@ -6,6 +6,9 @@
 @import "picks.module.css";
 @import "carousel.module.css";
 
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 @font-face {
   font-family: "HumanSans";
   src: url("../assets/fonts/HumanSans-Regular.otf");
@@ -62,6 +65,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+* {
+  min-height: 0;
+  min-width: 0;
 }
 
 main {
