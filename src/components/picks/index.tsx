@@ -34,7 +34,11 @@ export default function PicksGrid(): ReactElement {
       <h1 className="hotitle">Popular picks for summer</h1>
       <div className="picksgrid">
         {Picks.map((o) => {
-          return <PicksBox title={o.title} image={o.image} />;
+          return (
+            <div key={o.title}>
+              <PicksBox title={o.title} image={o.image} />
+            </div>
+          );
         })}
       </div>
     </div>

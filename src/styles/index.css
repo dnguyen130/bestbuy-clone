@@ -42,6 +42,7 @@
   --white: #fff;
   --gray: #f4f6f9;
   --darkgray: #55555a;
+  --ratinggray: #cdd1d7;
   --searchgray: #c5cbd5;
   --hovergray: #e0e6ef;
   --black: #1d252c;
@@ -51,6 +52,7 @@
   --darkblue: #003da6;
   --darkerblue: #011f72;
   --yellow: #fff200;
+  --ratingyellow: #fecf0a;
 
   font-family: HumanSans, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -69,7 +71,6 @@
 
 * {
   min-height: 0;
-  min-width: 0;
 }
 
 main {

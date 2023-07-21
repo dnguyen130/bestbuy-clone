@@ -45,8 +45,6 @@ export default function Navbar(): ReactElement {
   const [searchFocus, setSearchFocus] = useState(false);
   const [activeSearchButton, setActiveSearchButton] = useState("");
 
-  console.log(searchQuery, searchQuery !== "");
-
   useEffect(() => {
     if (searchQuery !== "" && searchFocus) {
       setIsTyping(true);
@@ -60,7 +58,7 @@ export default function Navbar(): ReactElement {
       <div className="header-content">
         <ul>
           {SecondaryLinks.map((o: string) => {
-            return <li>{o}</li>;
+            return <li key={o}>{o}</li>;
           })}
         </ul>
         <div className="header-mainrow">
@@ -119,7 +117,7 @@ export default function Navbar(): ReactElement {
           <div className="primarylink-container">
             {Object.values(PrimaryLinks).map((o) => {
               return (
-                <div className="primarylink desktop">
+                <div key={o.title} className="primarylink desktop">
                   <div className="primarylink-icon">{o.icon}</div>
                   <div className="primarylink-title">{o.title}</div>
                 </div>
@@ -127,7 +125,7 @@ export default function Navbar(): ReactElement {
             })}
             {Object.values(PrimaryLinks).map((o) => {
               return (
-                <div className="primarylink mobile">
+                <div key={o.title} className="primarylink mobile">
                   <div className="primarylink-icon">{o.icon}</div>
                 </div>
               );
@@ -139,13 +137,15 @@ export default function Navbar(): ReactElement {
         <div className="searchgroup">
           {SearchLinks.map((o) => {
             return (
-              <SearchLink
-                title={o}
-                active={activeSearchButton === o}
-                onClick={() =>
-                  setActiveSearchButton(activeSearchButton === o ? "" : o)
-                }
-              />
+              <div key={o}>
+                <SearchLink
+                  title={o}
+                  active={activeSearchButton === o}
+                  onClick={() =>
+                    setActiveSearchButton(activeSearchButton === o ? "" : o)
+                  }
+                />
+              </div>
             );
           })}
         </div>

@@ -36,12 +36,14 @@ export default function HottestOffers(): ReactElement {
       <div className="productboxgrid">
         {Products.map((o) => {
           return (
-            <ProductBox
-              image={o.image}
-              description={o.description}
-              sub={o.sub ? o.sub : ""}
-              link={o.link}
-            />
+            <div key={o.description}>
+              <ProductBox
+                image={o.image}
+                description={o.description}
+                sub={o.sub ? o.sub : ""}
+                link={o.link}
+              />
+            </div>
           );
         })}
       </div>

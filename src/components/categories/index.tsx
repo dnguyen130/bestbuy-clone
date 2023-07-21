@@ -61,12 +61,20 @@ export default function CategoriesGrid(): ReactElement {
       <h1 className="hotitle">Shop by category</h1>
       <div className="picksgrid spacedrow">
         {Categories1.map((o) => {
-          return <PicksBox title={o.title} image={o.image} />;
+          return (
+            <div key={o.title}>
+              <PicksBox title={o.title} image={o.image} />
+            </div>
+          );
         })}
       </div>
       <div className="picksgrid">
         {Categories2.map((o) => {
-          return <PicksBox title={o.title} image={o.image} />;
+          return (
+            <div key={o.title}>
+              <PicksBox title={o.title} image={o.image} />;
+            </div>
+          );
         })}
       </div>
     </div>
