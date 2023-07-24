@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import Slider from "react-slick";
 import CarouselItem from "../carouselitem";
+import { CarouselItemType } from "../carouselitem";
 
 const settings = {
   dots: true,
@@ -10,15 +11,27 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export default function CarouselComponent(): ReactElement {
+interface CarouselComponentType {
+  CarouselArray: CarouselItemType[];
+}
+
+export default function CarouselComponent({
+  CarouselArray,
+}: CarouselComponentType): ReactElement {
   return (
     <Slider {...settings}>
-      <CarouselItem rating={3.5} />
-      <CarouselItem />
-      <CarouselItem />
-      <CarouselItem />
-      <CarouselItem />
-      <CarouselItem />
+      {Object.values(CarouselArray).map((o) => {
+        return (
+          <CarouselItem
+            rating={o.rating}
+            name={o.name}
+            reviews={o.reviews}
+            onSale={o.onSale}
+            saveAmount={o.saveAmount}
+            price={o.price}
+          />
+        );
+      })}
     </Slider>
   );
 }

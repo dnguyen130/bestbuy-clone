@@ -4,7 +4,9 @@ import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 const StarCalc = (rating: number) => {
   const array: string[] = [];
   for (let i = 0; i < 5; i++) {
-    if (i < rating && i + 1 < rating) {
+    if (i < rating && i == 4) {
+      array.push("full");
+    } else if (i < rating && i + 1 < rating) {
       array.push("full");
     } else if (i < rating && i + 1 > rating) {
       array.push("half");
@@ -15,21 +17,28 @@ const StarCalc = (rating: number) => {
   return array;
 };
 
-interface CarouselItemType {
+export interface CarouselItemType {
   rating: number;
+  name: string;
+  reviews: number;
+  onSale: boolean;
+  saveAmount: number;
+  price: number;
 }
 
 export default function CarouselItem({
   rating,
+  name = "Name",
+  reviews = 0,
+  onSale = true,
+  saveAmount = 248,
+  price = 399.99,
 }: CarouselItemType): ReactElement {
   return (
     <div className="carouselitem">
       <img src="/outlet/1.jpeg" />
       <div className="carouseltext">
-        <p className="itemname">
-          Refurbished (Excellent) - Dyson Official Outlet - Airwrap Styler
-          Complete Long - Vinca Blue/Rose - (1 Year Dyson Warranty)
-        </p>
+        <p className="itemname">{name}</p>
         <div className="carouselrating">
           {StarCalc(rating).map((o, i) => {
             if (o === "full") {
@@ -41,9 +50,9 @@ export default function CarouselItem({
             }
           })}
         </div>
-        <p className="itemreview">(0 Reviews)</p>
-        <p className="itemsale">SAVE $248</p>
-        <p className="itemprice">$399.99</p>
+        <p className="itemreview">({reviews} Reviews)</p>
+        {onSale && <p className="itemsale">SAVE ${saveAmount}</p>}
+        <p className={onSale ? "itempricesale" : " itemprice"}>${price}</p>
       </div>
     </div>
   );

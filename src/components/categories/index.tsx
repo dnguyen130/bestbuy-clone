@@ -72,7 +72,7 @@ export default function CategoriesGrid(): ReactElement {
         {Categories2.map((o) => {
           return (
             <div key={o.title}>
-              <PicksBox title={o.title} image={o.image} />;
+              <PicksBox title={o.title} image={o.image} />
             </div>
           );
         })}

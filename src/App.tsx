@@ -10,6 +10,8 @@ import PicksGrid from "./components/picks";
 import CategoriesGrid from "./components/categories";
 import CarouselCard from "./components/carouselcard";
 
+import { Carousel_1 } from "../utils/data.ts";
+
 const IconLinkList = [
   {
     title: "Quick and Easy Store Pickup",
@@ -43,7 +45,7 @@ function App() {
           <HottestOffers />
           <PicksGrid />
           <CategoriesGrid />
-          <CarouselCard />
+          <CarouselCard banner="banner/outlet.png" CarouselArray={Carousel_1} />
         </div>
       </main>
     </div>
