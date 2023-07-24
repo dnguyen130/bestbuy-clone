@@ -45,7 +45,30 @@ function App() {
           <HottestOffers />
           <PicksGrid />
           <CategoriesGrid />
-          <CarouselCard banner="banner/outlet.png" CarouselArray={Carousel_1} />
+          <CarouselCard
+            banner="banner/outlet.png"
+            CarouselArray={Carousel_1}
+            dark={false}
+            header="Save big on outlet tech."
+            subheader="Experience outstanding deals on refurbished and open box products."
+            buttontext="Shop Deals"
+          />
+          <CarouselCard
+            banner="banner/marketplace.png"
+            CarouselArray={Carousel_1}
+            dark
+            header="Save big on outlet tech."
+            subheader="Experience outstanding deals on refurbished and open box products."
+            buttontext="Shop Deals"
+          />
+          <CarouselCard
+            banner="banner/star.png"
+            dark={false}
+            CarouselArray={Carousel_1}
+            header="Latest and Greatest Tech."
+            subheader="Check out the latest product launches and get inspired by the tech of tomorrow."
+            buttontext="Explore Latest and Greatest Tech"
+          />
         </div>
       </main>
     </div>

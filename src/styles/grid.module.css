@@ -117,7 +117,7 @@
 .darkbutton {
   background-color: var(--blue);
   border: none;
-  padding: 20px;
+  padding: 10px 15px;
   border-radius: 3px;
   cursor: pointer;
 }

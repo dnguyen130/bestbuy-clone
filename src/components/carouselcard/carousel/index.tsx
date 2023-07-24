@@ -23,12 +23,14 @@ export default function CarouselComponent({
       {Object.values(CarouselArray).map((o) => {
         return (
           <CarouselItem
+            image={o.image}
             rating={o.rating}
             name={o.name}
             reviews={o.reviews}
-            onSale={o.onSale}
             saveAmount={o.saveAmount}
             price={o.price}
+            isMarketplace={o.isMarketplace}
+            ehf={o.ehf}
           />
         );
       })}

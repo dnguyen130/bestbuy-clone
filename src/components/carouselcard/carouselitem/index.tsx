@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
+import { BiSolidShoppingBags } from "react-icons/bi";
 
 const StarCalc = (rating: number) => {
   const array: string[] = [];
@@ -18,25 +19,29 @@ const StarCalc = (rating: number) => {
 };
 
 export interface CarouselItemType {
+  image: string;
   rating: number;
   name: string;
   reviews: number;
-  onSale: boolean;
-  saveAmount: number;
-  price: number;
+  saveAmount?: string;
+  price: string;
+  isMarketplace: boolean;
+  ehf?: string;
 }
 
 export default function CarouselItem({
+  image,
   rating,
-  name = "Name",
-  reviews = 0,
-  onSale = true,
-  saveAmount = 248,
-  price = 399.99,
+  name,
+  reviews,
+  saveAmount,
+  price,
+  isMarketplace,
+  ehf,
 }: CarouselItemType): ReactElement {
   return (
     <div className="carouselitem">
-      <img src="/outlet/1.jpeg" />
+      <img src={image} />
       <div className="carouseltext">
         <p className="itemname">{name}</p>
         <div className="carouselrating">
@@ -51,8 +56,15 @@ export default function CarouselItem({
           })}
         </div>
         <p className="itemreview">({reviews} Reviews)</p>
-        {onSale && <p className="itemsale">SAVE ${saveAmount}</p>}
-        <p className={onSale ? "itempricesale" : " itemprice"}>${price}</p>
+        {saveAmount && <p className="itemsale">SAVE ${saveAmount}</p>}
+        <p className={saveAmount ? "itempricesale" : "itemprice"}>${price}</p>
+        {isMarketplace && (
+          <div className="itemmarketplace">
+            <BiSolidShoppingBags className="marketicon" size="100%" />
+            <p>Marketplace seller</p>
+          </div>
+        )}
+        {ehf && <p className="itemehf">Plus ${ehf} EHF</p>}
       </div>
     </div>
   );
