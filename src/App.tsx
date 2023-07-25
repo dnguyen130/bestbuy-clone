@@ -5,33 +5,35 @@ import HottestOffers from "./components/hottestoffers";
 import { TbClockBolt } from "react-icons/tb";
 import { AiOutlineDollar } from "react-icons/ai";
 import { FaTruckFast } from "react-icons/fa6";
-import { BsPersonCircle } from "react-icons/bs";
+import { BsStars } from "react-icons/bs";
 import PicksGrid from "./components/picks";
 import CategoriesGrid from "./components/categories";
 import CarouselCard from "./components/carouselcard";
 
 import { Carousel_1 } from "../utils/data.ts";
+import QuickLink from "./components/quicklink/index.tsx";
+import FooterLinks from "./components/footerlinks/index.tsx";
 
 const IconLinkList = [
   {
-    title: "Quick and Easy Store Pickup",
-    subtitle: "Get your order in as a little as 1 hour.",
+    description1: "Quick and Easy",
+    description2: "Store Pickup",
     icon: <TbClockBolt size="100%" />,
   },
   {
-    title: "Low Price Guarantee",
-    subtitle: "We won't be beat on price.",
-    icon: <AiOutlineDollar size="100%" />,
-  },
-  {
-    title: "Fast, free shipping",
-    subtitle: "On orders over $35*.",
+    description1: "Free shipping",
+    description2: "over $35",
     icon: <FaTruckFast size="100%" />,
   },
   {
-    title: "Knowledgeable Advice",
-    subtitle: "Answers to your tech questions.",
-    icon: <BsPersonCircle size="100%" />,
+    description1: "Low Price",
+    description2: "Guarantee",
+    icon: <AiOutlineDollar size="100%" />,
+  },
+  {
+    description1: "Latest and",
+    description2: "Greatest Tech",
+    icon: <BsStars size="100%" />,
   },
 ];
 
@@ -71,6 +73,20 @@ function App() {
           />
         </div>
       </main>
+      <footer>
+        <div className="linkcont">
+          {IconLinkList.map((o) => {
+            return (
+              <QuickLink
+                icon={o.icon}
+                description1={o.description1}
+                description2={o.description2}
+              />
+            );
+          })}
+        </div>
+        <FooterLinks />
+      </footer>
     </div>
   );
 }

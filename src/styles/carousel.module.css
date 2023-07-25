@@ -26,15 +26,17 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 40%;
+  width: 30%;
+  padding-right: 50px;
 }
 
 .textsidedark {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 40%;
+  width: 30%;
   color: var(--white);
+  padding-right: 50px;
 }
 
 .textside h2 {
@@ -57,8 +59,20 @@
 
 .carouselcont {
   display: block;
-  max-width: 450px;
-  width: 50%;
+  max-width: 600px;
+  width: 70%;
+}
+
+@media screen and (max-width: 1024px) {
+  .carouselcont {
+    max-width: 500px;
+    width: 60%;
+  }
+
+  .textside,
+  .textsidedark {
+    width: 40%;
+  }
 }
 
 .carouselitem {

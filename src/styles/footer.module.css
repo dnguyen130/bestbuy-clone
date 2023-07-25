@@ -1,0 +1,38 @@
+.linkcont {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 48px 30px;
+  box-sizing: border-box;
+}
+
+.quicklink {
+  display: flex;
+  color: var(--blue);
+}
+
+.quicklink .icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+}
+
+.quicklink h2 {
+  margin: 0;
+  font-size: 16px;
+  display: flex;
+  line-height: 22px;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+
+.footerlinkcont {
+  width: 100%;
+  min-height: 50px;
+  background-color: var(--gray);
+  box-sizing: border-box;
+  padding: 24px 16px;
+}

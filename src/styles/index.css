@@ -5,6 +5,7 @@
 @import "hottestoffers.module.css";
 @import "picks.module.css";
 @import "carousel.module.css";
+@import "footer.module.css";
 
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
@@ -81,11 +82,16 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .margin {
   box-sizing: border-box;
   margin: 0 24px;
+}
+
+footer {
+  border-top: 1px solid #e0e6ef;
 }
 
 @media screen and (max-width: 1024px) {
