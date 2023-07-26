@@ -1,20 +1,19 @@
 import Navbar from "./components/navbar";
 import FeatureGrid from "./components/featuregrid";
 import HottestOffers from "./components/hottestoffers";
+import PicksGrid from "./components/picks";
+import CategoriesGrid from "./components/categories";
+import CarouselCard from "./components/carouselcard";
+import QuickLink from "./components/quicklink/index.tsx";
+import Footer from "./components/footer/index.tsx";
 
+import { Carousel_1 } from "../utils/data.ts";
 import { TbClockBolt } from "react-icons/tb";
 import { AiOutlineDollar } from "react-icons/ai";
 import { FaTruckFast } from "react-icons/fa6";
 import { BsStars } from "react-icons/bs";
-import PicksGrid from "./components/picks";
-import CategoriesGrid from "./components/categories";
-import CarouselCard from "./components/carouselcard";
 
-import { Carousel_1 } from "../utils/data.ts";
-import QuickLink from "./components/quicklink/index.tsx";
-import FooterLinks from "./components/footerlinks/index.tsx";
-
-const IconLinkList = [
+export const IconLinkList = [
   {
     description1: "Quick and Easy",
     description2: "Store Pickup",
@@ -85,7 +84,7 @@ function App() {
             );
           })}
         </div>
-        <FooterLinks />
+        <Footer />
       </footer>
     </div>
   );

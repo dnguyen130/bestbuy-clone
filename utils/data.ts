@@ -129,3 +129,83 @@ export const Carousel_1: CarouselItemType[] = [
     ehf: "0.70",
   },
 ];
+
+//Footer Links
+
+export const CustomerSupport = {
+  title: "Customer Support",
+  links: [
+    {
+      title: "Contact Us",
+      link: "#",
+    },
+    {
+      title: "Help Centre",
+      link: "#",
+    },
+    {
+      title: "Returns & Exchanges",
+      link: "#",
+    },
+    {
+      title: "Best Buy Financing",
+      link: "#",
+    },
+    {
+      title: "Best Buy Gift Card",
+      link: "#",
+    },
+  ],
+};
+
+export const Account = {
+  title: "Account",
+  links: [
+    { title: "Order Status", link: "#" },
+    { title: "Manage Account", link: "#" },
+    { title: "Email Preferences", link: "#" },
+  ],
+};
+
+export const Services = {
+  title: "Services",
+  links: [
+    { title: "Geek Squad", link: "#" },
+    { title: "Trade-In Program", link: "#" },
+    { title: "Electronics Recycling", link: "#" },
+    { title: "Best Buy Health", link: "#" },
+  ],
+};
+
+export const Aboutus = {
+  title: "About Us",
+  links: [
+    { title: "Careers", link: "#" },
+    { title: "Corporate Information", link: "#" },
+    { title: "About Best Buy Marketplace", link: "#" },
+    { title: "Sell on Best Buy Marketplace", link: "#" },
+    { title: "Best Buy Affiliate Program", link: "#" },
+    { title: "Advertise with Best Buy", link: "#" },
+  ],
+};
+
+export const Internationalsites = {
+  title: "International Sites",
+  links: [{ title: "Best Buy US", link: "#" }],
+};
+
+export const Mobileapps = {
+  title: "Mobile Apps",
+  links: [
+    {
+      icon: "android",
+      title: "Android App",
+      link: "#",
+    },
+    {
+      icon: "ios",
+      title: "iOS App",
+      link: "#",
+    },
+  ],
+};
