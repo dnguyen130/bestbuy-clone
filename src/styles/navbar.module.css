@@ -95,6 +95,10 @@
   right: 0;
 }
 
+.searchtitle {
+  font-weight: bold;
+}
+
 .primarylink {
   display: flex;
   align-items: center;
@@ -135,7 +139,7 @@
 
 .searchlink {
   display: flex;
-  margin: 0 10px;
+  margin: 0 20px;
   cursor: pointer;
 }
 
@@ -148,7 +152,7 @@
 }
 
 .searcharrow {
-  margin-left: 5px;
+  margin: 2px 0 0 3px;
   width: 15px;
   height: 15px;
 }
@@ -200,6 +204,22 @@
 
 .mobile {
   display: none;
+}
+
+.dropdownmenu,
+.dropdownmenuactive {
+  width: 500px;
+  min-height: 10px;
+  background-color: var(--white);
+  position: absolute;
+}
+
+.dropdownmenu {
+  display: none;
+}
+
+.dropdownmenuactive {
+  display: flex;
 }
 
 @media screen and (max-width: 1024px) {
