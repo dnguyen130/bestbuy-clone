@@ -11,6 +11,7 @@ import {
   Internationalsites,
   Mobileapps,
 } from "../../../utils/data";
+import BottomBar from "./bottom";
 
 export default function Footer(): ReactElement {
   return (
@@ -34,6 +35,7 @@ export default function Footer(): ReactElement {
         </div>
         <Socials />
       </div>
+      <BottomBar />
     </div>
   );
 }
