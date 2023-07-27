@@ -4,6 +4,7 @@
   justify-content: space-around;
   padding: 48px 30px;
   box-sizing: border-box;
+  max-width: 1280px;
 }
 
 .quicklink {
@@ -54,6 +55,9 @@
   width: 100%;
   background-color: var(--gray);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footerlinkcont {
@@ -164,9 +168,11 @@
 }
 
 .bottomcont {
+  max-width: 1280px;
   border-top: 1px solid #e0e6ef;
   box-sizing: border-box;
   padding: 16px 24px;
+  width: 100%;
 }
 
 .bottomcont p {

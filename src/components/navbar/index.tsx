@@ -133,146 +133,148 @@ export default function Navbar(): ReactElement {
           </div>
         </div>
       </div>
-      <div className="bottombar">
-        <div className="searchgroup">
-          {SearchLinks.map((o) => {
-            return (
-              <div key={o}>
-                <SearchLink
-                  title={o}
-                  active={activeSearchButton === o}
-                  onClick={() =>
-                    setActiveSearchButton(activeSearchButton === o ? "" : o)
-                  }
-                />
+      <div className="bottombarwrapper">
+        <div className="bottombar">
+          <div className="searchgroup">
+            {SearchLinks.map((o) => {
+              return (
+                <div key={o}>
+                  <SearchLink
+                    title={o}
+                    active={activeSearchButton === o}
+                    onClick={() =>
+                      setActiveSearchButton(activeSearchButton === o ? "" : o)
+                    }
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <div className="mobilesearchgroup">
+            <div
+              className="searchmenu"
+              style={{
+                opacity: searchFocus ? 0 : 1,
+                width: searchFocus ? 0 : 40,
+              }}
+              onClick={() =>
+                setActiveSearchButton(
+                  activeSearchButton === "burger" ? "" : "burger"
+                )
+              }
+            >
+              <div className="searchburger">
+                {activeSearchButton !== "burger" ? (
+                  <RxHamburgerMenu size="100%" />
+                ) : (
+                  <MdOutlineClose size="100%" />
+                )}
+                <h3 className="searchtitle">Menu</h3>
               </div>
-            );
-          })}
-        </div>
-        <div className="mobilesearchgroup">
-          <div
-            className="searchmenu"
-            style={{
-              opacity: searchFocus ? 0 : 1,
-              width: searchFocus ? 0 : 40,
-            }}
-            onClick={() =>
-              setActiveSearchButton(
-                activeSearchButton === "burger" ? "" : "burger"
-              )
-            }
-          >
-            <div className="searchburger">
-              {activeSearchButton !== "burger" ? (
-                <RxHamburgerMenu size="100%" />
-              ) : (
-                <MdOutlineClose size="100%" />
-              )}
-              <h3 className="searchtitle">Menu</h3>
             </div>
-          </div>
-          <div className="searchbox short">
-            <input
-              placeholder="Search Best Buy"
-              type="text"
-              className="searchbar"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onFocus={() => setSearchFocus(true)}
-              onBlur={() => setSearchFocus(false)}
-            />
-            <motion.div
-              className="searchclose"
-              style={{ pointerEvents: !searchQuery ? "none" : "auto" }}
-              initial={{
-                opacity: 0,
-                x: 10,
-              }}
-              animate={{
-                opacity: isTyping ? 1 : 0,
-                x: isTyping ? 0 : 10,
-                cursor: isTyping ? "pointer" : "auto",
-              }}
-              exit={{
-                x: 10,
-                opacity: 0,
-              }}
-              transition={{ ease: "linear", duration: 0.2 }}
-            >
-              <AiFillCloseCircle
-                size="40%"
-                onClick={() => setSearchQuery("")}
+            <div className="searchbox short">
+              <input
+                placeholder="Search Best Buy"
+                type="text"
+                className="searchbar"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onFocus={() => setSearchFocus(true)}
+                onBlur={() => setSearchFocus(false)}
               />
-              <div className="searchline" />
-            </motion.div>
-            <div className="searchbutton">
-              <BsSearch size="40%" />
+              <motion.div
+                className="searchclose"
+                style={{ pointerEvents: !searchQuery ? "none" : "auto" }}
+                initial={{
+                  opacity: 0,
+                  x: 10,
+                }}
+                animate={{
+                  opacity: isTyping ? 1 : 0,
+                  x: isTyping ? 0 : 10,
+                  cursor: isTyping ? "pointer" : "auto",
+                }}
+                exit={{
+                  x: 10,
+                  opacity: 0,
+                }}
+                transition={{ ease: "linear", duration: 0.2 }}
+              >
+                <AiFillCloseCircle
+                  size="40%"
+                  onClick={() => setSearchQuery("")}
+                />
+                <div className="searchline" />
+              </motion.div>
+              <div className="searchbutton">
+                <BsSearch size="40%" />
+              </div>
             </div>
-          </div>
-          <div
-            className="searchcancel"
-            style={{
-              width: searchFocus ? 60 : 0,
-              opacity: searchFocus ? 1 : 0,
-            }}
-          >
-            Cancel
-          </div>
-        </div>
-        <div className="desktopsearchgroup">
-          <div
-            className="searchmenu"
-            onClick={() =>
-              setActiveSearchButton(
-                activeSearchButton === "burger" ? "" : "burger"
-              )
-            }
-          >
-            <div className="searchburger">
-              {activeSearchButton !== "burger" ? (
-                <RxHamburgerMenu size="100%" />
-              ) : (
-                <MdOutlineClose size="100%" />
-              )}
-              <h3 className="searchtitle">Menu</h3>
-            </div>
-          </div>
-          <div className="searchbox short">
-            <input
-              placeholder="Search Best Buy"
-              type="text"
-              className="searchbar"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onFocus={() => setSearchFocus(true)}
-              onBlur={() => setSearchFocus(false)}
-            />
-            <motion.div
-              className="searchclose"
-              style={{ pointerEvents: !searchQuery ? "none" : "auto" }}
-              initial={{
-                opacity: 0,
-                x: 10,
+            <div
+              className="searchcancel"
+              style={{
+                width: searchFocus ? 60 : 0,
+                opacity: searchFocus ? 1 : 0,
               }}
-              animate={{
-                opacity: isTyping ? 1 : 0,
-                x: isTyping ? 0 : 10,
-                cursor: isTyping ? "pointer" : "auto",
-              }}
-              exit={{
-                x: 10,
-                opacity: 0,
-              }}
-              transition={{ ease: "linear", duration: 0.2 }}
             >
-              <AiFillCloseCircle
-                size="40%"
-                onClick={() => setSearchQuery("")}
+              Cancel
+            </div>
+          </div>
+          <div className="desktopsearchgroup">
+            <div
+              className="searchmenu"
+              onClick={() =>
+                setActiveSearchButton(
+                  activeSearchButton === "burger" ? "" : "burger"
+                )
+              }
+            >
+              <div className="searchburger">
+                {activeSearchButton !== "burger" ? (
+                  <RxHamburgerMenu size="100%" />
+                ) : (
+                  <MdOutlineClose size="100%" />
+                )}
+                <h3 className="searchtitle">Menu</h3>
+              </div>
+            </div>
+            <div className="searchbox short">
+              <input
+                placeholder="Search Best Buy"
+                type="text"
+                className="searchbar"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onFocus={() => setSearchFocus(true)}
+                onBlur={() => setSearchFocus(false)}
               />
-              <div className="searchline" />
-            </motion.div>
-            <div className="searchbutton">
-              <BsSearch size="40%" />
+              <motion.div
+                className="searchclose"
+                style={{ pointerEvents: !searchQuery ? "none" : "auto" }}
+                initial={{
+                  opacity: 0,
+                  x: 10,
+                }}
+                animate={{
+                  opacity: isTyping ? 1 : 0,
+                  x: isTyping ? 0 : 10,
+                  cursor: isTyping ? "pointer" : "auto",
+                }}
+                exit={{
+                  x: 10,
+                  opacity: 0,
+                }}
+                transition={{ ease: "linear", duration: 0.2 }}
+              >
+                <AiFillCloseCircle
+                  size="40%"
+                  onClick={() => setSearchQuery("")}
+                />
+                <div className="searchline" />
+              </motion.div>
+              <div className="searchbutton">
+                <BsSearch size="40%" />
+              </div>
             </div>
           </div>
         </div>

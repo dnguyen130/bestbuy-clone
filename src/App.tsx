@@ -38,7 +38,7 @@ export const IconLinkList = [
 
 function App() {
   return (
-    <div className="AppContainer">
+    <div className="appcontainer">
       <Navbar />
       <main>
         <div className="margin">

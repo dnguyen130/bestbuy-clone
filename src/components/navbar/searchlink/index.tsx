@@ -27,7 +27,7 @@ export default function SearchLink({
           {active ? <BsChevronUp size="100%" /> : <BsChevronDown size="100%" />}
         </div>
       </div>
-      <div className={menuActive ? "dropdownmenuactive" : "dropdownmenu"}></div>
+      <div className={active ? "dropdownmenuactive" : "dropdownmenu"}></div>
     </div>
   );
 }

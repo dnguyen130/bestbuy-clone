@@ -2,6 +2,9 @@
   background-color: var(--blue);
   width: 100%;
   color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header ul {
@@ -12,12 +15,12 @@
   display: flex;
   justify-content: flex-end;
   margin: 0;
-  padding: 16px 0;
+  padding: 16px 24px;
   cursor: pointer;
 }
 
 .header li {
-  padding: 0 8px;
+  padding: 0 0 0 8px;
 }
 
 .header li:hover {
@@ -25,6 +28,8 @@
 }
 
 .header-content {
+  max-width: 1280px;
+  width: 100%;
   padding: 0 24px 16px;
 }
 
@@ -34,6 +39,7 @@
   column-gap: 32px;
   align-items: center;
   min-height: 56px;
+  padding: 0 24px;
 }
 
 .searchbox {
@@ -100,9 +106,7 @@
 }
 
 .primarylink {
-  display: flex;
-  align-items: center;
-  padding: 0 24px 0 8px;
+  padding: 0 0 0 24px;
   height: auto;
   cursor: pointer;
 }
@@ -128,12 +132,21 @@
 }
 
 .bottombar {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 1280px;
+  width: 100%;
+  padding-left: 24px;
+}
+
+.bottombarwrapper {
   width: 100%;
   height: 56px;
   background-color: var(--darkblue);
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  justify-content: center;
   box-sizing: border-box;
 }
 
@@ -166,7 +179,7 @@
 }
 
 .searchburger {
-  height: 50%;
+  height: 40px;
   display: flex;
   align-items: center;
 }
@@ -208,10 +221,11 @@
 
 .dropdownmenu,
 .dropdownmenuactive {
-  width: 500px;
+  width: 300px;
   min-height: 10px;
-  background-color: var(--white);
+  background-color: green;
   position: absolute;
+  bottom: -25px;
 }
 
 .dropdownmenu {
@@ -220,6 +234,10 @@
 
 .dropdownmenuactive {
   display: flex;
+}
+
+.dropdowncont {
+  position: relative;
 }
 
 @media screen and (max-width: 1024px) {
