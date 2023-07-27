@@ -1,6 +1,8 @@
 import { ReactElement, useState } from "react";
 import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 
+import { AnimatePresence, motion } from "framer-motion";
+
 interface SearchLinkType {
   title: string;
   active: boolean;
@@ -17,7 +19,8 @@ export default function SearchLink({
   return (
     <div
       className="dropdowncont"
-      onClick={() => {
+      onClick={(e) => {
+        e.stopPropagation();
         setMenuActive(!menuActive);
       }}
     >
@@ -27,7 +30,19 @@ export default function SearchLink({
           {active ? <BsChevronUp size="100%" /> : <BsChevronDown size="100%" />}
         </div>
       </div>
-      <div className={active ? "dropdownmenuactive" : "dropdownmenu"}></div>
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 300, opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="dropdownmenu"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="menuarrow" />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

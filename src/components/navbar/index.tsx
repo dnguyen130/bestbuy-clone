@@ -9,6 +9,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
 
 import SearchLink from "./searchlink";
+import { UseMyContext } from "../../../utils/provider";
 
 interface PrimaryLinkType {
   title: string;
@@ -43,7 +44,8 @@ export default function Navbar(): ReactElement {
   const [isTyping, setIsTyping] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchFocus, setSearchFocus] = useState(false);
-  const [activeSearchButton, setActiveSearchButton] = useState("");
+
+  const { activeDropdown, setActiveDropdown } = UseMyContext();
 
   useEffect(() => {
     if (searchQuery !== "" && searchFocus) {
@@ -141,9 +143,9 @@ export default function Navbar(): ReactElement {
                 <div key={o}>
                   <SearchLink
                     title={o}
-                    active={activeSearchButton === o}
+                    active={activeDropdown === o}
                     onClick={() =>
-                      setActiveSearchButton(activeSearchButton === o ? "" : o)
+                      setActiveDropdown(activeDropdown === o ? "" : o)
                     }
                   />
                 </div>
@@ -158,13 +160,11 @@ export default function Navbar(): ReactElement {
                 width: searchFocus ? 0 : 40,
               }}
               onClick={() =>
-                setActiveSearchButton(
-                  activeSearchButton === "burger" ? "" : "burger"
-                )
+                setActiveDropdown(activeDropdown === "burger" ? "" : "burger")
               }
             >
               <div className="searchburger">
-                {activeSearchButton !== "burger" ? (
+                {activeDropdown !== "burger" ? (
                   <RxHamburgerMenu size="100%" />
                 ) : (
                   <MdOutlineClose size="100%" />
@@ -224,13 +224,11 @@ export default function Navbar(): ReactElement {
             <div
               className="searchmenu"
               onClick={() =>
-                setActiveSearchButton(
-                  activeSearchButton === "burger" ? "" : "burger"
-                )
+                setActiveDropdown(activeDropdown === "burger" ? "" : "burger")
               }
             >
               <div className="searchburger">
-                {activeSearchButton !== "burger" ? (
+                {activeDropdown !== "burger" ? (
                   <RxHamburgerMenu size="100%" />
                 ) : (
                   <MdOutlineClose size="100%" />

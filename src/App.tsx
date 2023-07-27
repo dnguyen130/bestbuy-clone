@@ -12,6 +12,9 @@ import { TbClockBolt } from "react-icons/tb";
 import { AiOutlineDollar } from "react-icons/ai";
 import { FaTruckFast } from "react-icons/fa6";
 import { BsStars } from "react-icons/bs";
+import { AnimatePresence, motion } from "framer-motion";
+
+import { UseMyContext } from "../utils/provider.tsx";
 
 export const IconLinkList = [
   {
@@ -37,11 +40,29 @@ export const IconLinkList = [
 ];
 
 function App() {
+  const { activeDropdown, setActiveDropdown } = UseMyContext();
+
   return (
-    <div className="appcontainer">
+    <div
+      className="appcontainer"
+      onClick={() => (activeDropdown !== "" ? setActiveDropdown("") : null)}
+      style={{
+        overflow: activeDropdown ? "hidden" : "auto",
+      }}
+    >
       <Navbar />
       <main>
         <div className="margin">
+          <AnimatePresence>
+            {activeDropdown && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="overlay"
+              />
+            )}
+          </AnimatePresence>
           <FeatureGrid />
           <HottestOffers />
           <PicksGrid />
