@@ -9,6 +9,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
 
 import SearchLink from "./searchlink";
+import { SearchLinks } from "../../../utils/data";
 import { UseMyContext } from "../../../utils/provider";
 
 interface PrimaryLinkType {
@@ -37,8 +38,6 @@ const PrimaryLinks: Record<string, PrimaryLinkType> = {
     icon: <BsCart3 size="100%" />,
   },
 };
-
-const SearchLinks: string[] = ["Shop", "Brands", "Deals", "Services"];
 
 export default function Navbar(): ReactElement {
   const [isTyping, setIsTyping] = useState(false);
@@ -138,15 +137,16 @@ export default function Navbar(): ReactElement {
       <div className="bottombarwrapper">
         <div className="bottombar">
           <div className="searchgroup">
-            {SearchLinks.map((o) => {
+            {Object.entries(SearchLinks).map(([key, value]) => {
               return (
-                <div key={o}>
+                <div key={key}>
                   <SearchLink
-                    title={o}
-                    active={activeDropdown === o}
+                    title={key}
+                    active={activeDropdown === key}
                     onClick={() =>
-                      setActiveDropdown(activeDropdown === o ? "" : o)
+                      setActiveDropdown(activeDropdown === key ? "" : key)
                     }
+                    links={value}
                   />
                 </div>
               );

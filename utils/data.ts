@@ -209,3 +209,163 @@ export const Mobileapps = {
     },
   ],
 };
+
+// const SearchLinks: string[] = ["Shop", "Brands", "Deals", "Services"];
+
+export const SearchLinks = {
+  Shop: [
+    {
+      header: "What's Popular",
+    },
+    {
+      title: "Top Deals",
+      link: "#",
+    },
+    {
+      title: "Back to School Deals",
+      link: "#",
+    },
+    {
+      title: "Samsung Galaxy Z Fold5 and Galaxy Z Flip5",
+      link: "#",
+    },
+    {
+      title: "Samsung Galaxy Tab S9",
+      link: "#",
+    },
+    {
+      title: "Samsung Galaxy Watch6 and Galaxy Watch6 Classic",
+      link: "#",
+    },
+    {
+      title: "Best-in-Class Windows Laptops",
+      link: "#",
+    },
+    {
+      title: "Gift Guide",
+      link: "#",
+      last: true,
+    },
+    {
+      header: "Shop by Category",
+    },
+    {
+      title: "Computers, Tablets & Accessories",
+      link: "#",
+    },
+    {
+      title: "Cell Phones and Accessories",
+      link: "#",
+    },
+    {
+      title: "Office Supplies & Ink",
+      link: "#",
+    },
+    { title: "TV & Home Theatre", link: "#" },
+    { title: "Headphones, Speakers, & Audio", link: "#" },
+    { title: "Cameras, Camcorders, & Drones", link: "#" },
+    { title: "Car Tech and GPS", link: "#" },
+    { title: "Appliances", link: "#" },
+    { title: "Smart Home", link: "#" },
+    { title: "Home Living", link: "#" },
+    { title: "Baby & Maternity", link: "#" },
+    { title: "Video Games & VR", link: "#" },
+    { title: "Wearable Technology", link: "#" },
+    { title: "Health & Fitness", link: "#" },
+    { title: "Sports, Recreation, & Transportation", link: "#" },
+    { title: "Movies & Music", link: "#" },
+    { title: "Musical Instruments & Equipment", link: "#" },
+    { title: "Toys, Games, & Education", link: "#" },
+    { title: "Beauty", link: "#" },
+    { title: "Personal Care", link: "#" },
+    { title: "Travel, Luggage, & Bags", link: "#" },
+    { title: "Watches, Jewelry, & Fashion", link: "#" },
+    { title: "Gift Cards", link: "#" },
+  ],
+  Brands: [
+    {
+      title: "Popular Brands",
+      link: "#",
+    },
+    {
+      title: "A B",
+      link: "#",
+    },
+    {
+      title: "C D E F",
+      link: "#",
+    },
+    {
+      title: "G H I J K",
+      link: "#",
+    },
+    {
+      title: "L M N O",
+      link: "#",
+    },
+    {
+      title: "P Q R S ",
+      link: "#",
+    },
+    {
+      title: "T U V W X Y Z",
+      link: "#",
+    },
+  ],
+  Deals: [
+    {
+      title: "Top Deals",
+      link: "#",
+    },
+    {
+      title: "Best Buy Outlet",
+      link: "#",
+    },
+    {
+      title: "Open Box Products",
+      link: "#",
+    },
+    {
+      title: "Refurbished Products",
+      link: "#",
+    },
+    {
+      title: "Clearance Products",
+      link: "#",
+    },
+  ],
+  Services: [
+    {
+      title: "Geek Squad Services",
+      link: "#",
+    },
+    {
+      title: "Trade-In Program",
+      link: "#",
+    },
+    {
+      title: "Monthly Subscription",
+      link: "#",
+    },
+    {
+      title: "Electronics Recycling",
+      link: "#",
+    },
+    {
+      title: "Best Buy Membership",
+      link: "#",
+    },
+    {
+      title: "Best Buy Protection",
+      link: "#",
+    },
+    {
+      title: "Best Buy Business",
+      link: "#",
+    },
+    {
+      title: "Best Buy Health",
+      link: "#",
+    },
+  ],
+};

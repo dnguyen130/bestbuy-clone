@@ -13,6 +13,7 @@ import { AiOutlineDollar } from "react-icons/ai";
 import { FaTruckFast } from "react-icons/fa6";
 import { BsStars } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 
 import { UseMyContext } from "../utils/provider.tsx";
 
@@ -42,13 +43,18 @@ export const IconLinkList = [
 function App() {
   const { activeDropdown, setActiveDropdown } = UseMyContext();
 
+  useEffect(() => {
+    if (activeDropdown) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  }, [activeDropdown]);
+
   return (
     <div
       className="appcontainer"
       onClick={() => (activeDropdown !== "" ? setActiveDropdown("") : null)}
-      style={{
-        overflow: activeDropdown ? "hidden" : "auto",
-      }}
     >
       <Navbar />
       <main>

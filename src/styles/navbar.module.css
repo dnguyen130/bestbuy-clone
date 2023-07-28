@@ -20,7 +20,7 @@
 }
 
 .header li {
-  padding: 0 0 0 8px;
+  padding: 0 0 0 16px;
 }
 
 .header li:hover {
@@ -40,7 +40,6 @@
   column-gap: 32px;
   align-items: center;
   min-height: 56px;
-  padding: 0 24px;
 }
 
 .searchbox {
@@ -222,11 +221,13 @@
 
 .dropdownmenu {
   width: 300px;
-  background-color: green;
+  background-color: var(--white);
   position: absolute;
   top: 40px;
   z-index: 3;
   display: flex;
+  box-sizing: border-box;
+  overflow: visible;
 }
 
 .dropdowncont {
@@ -237,11 +238,48 @@
   width: 0px;
   height: 0px;
   position: absolute;
+  left: 10px;
   top: -10px;
-  left: 20px;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid var(--white);
+  z-index: 10;
+}
+
+.menulinks {
+  color: var(--black);
+  height: calc(100vh - 176px);
+}
+
+.menulinks p {
+  padding: 10px 16px 10px 24px;
+  font-weight: 300;
+  margin: 0;
+  font-size: 14px;
+}
+
+.menulinks h4 {
+  margin: 0;
+  padding: 10px 16px 10px 24px;
+}
+
+.menulinks p:first-child {
+  margin-top: 8px;
+}
+
+.menulinks h4:first-child {
+  margin-top: 8px;
+}
+
+.menulinks p:last-child {
+  margin-bottom: 8px;
+}
+
+.menulinks .divider {
+  border-top: 1px solid var(--ratinggray);
+  margin-top: 8px;
+  height: 8px;
+  background-color: var(--gray);
 }
 
 @media screen and (max-width: 1024px) {

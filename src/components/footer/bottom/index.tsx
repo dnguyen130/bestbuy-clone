@@ -43,8 +43,9 @@ export default function BottomBar(): ReactElement {
   return (
     <div className="bottomcont">
       <p>
-        © Best Buy Canada Ltd. Suite #102, 425 West 6th Avenue, Vancouver, BC
-        V5Y 1L3
+        This is a website created strictly for practicing web development. I do
+        not own any assets used on this website. All Rights Reserved by © Best
+        Buy Canada Ltd.
       </p>
       <ul>
         {BottomLinks.map((o) => {
