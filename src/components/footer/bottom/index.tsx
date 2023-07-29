@@ -45,7 +45,8 @@ export default function BottomBar(): ReactElement {
       <p>
         This is a website created strictly for practicing web development. I do
         not own any assets used on this website. All Rights Reserved by © Best
-        Buy Canada Ltd.
+        Buy Canada Ltd. Email any questions and concerns at
+        dannytnguyen.dev@gmail.com
       </p>
       <ul>
         {BottomLinks.map((o) => {

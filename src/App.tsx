@@ -57,18 +57,18 @@ function App() {
       onClick={() => (activeDropdown !== "" ? setActiveDropdown("") : null)}
     >
       <Navbar />
+      <AnimatePresence>
+        {activeDropdown && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="overlay"
+          />
+        )}
+      </AnimatePresence>
       <main>
         <div className="margin">
-          <AnimatePresence>
-            {activeDropdown && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="overlay"
-              />
-            )}
-          </AnimatePresence>
           <FeatureGrid />
           <HottestOffers />
           <PicksGrid />
