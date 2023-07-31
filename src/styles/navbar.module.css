@@ -22,11 +22,11 @@
   z-index: 20;
 }
 
-.header li {
+.header a {
   padding: 0 0 0 16px;
 }
 
-.header li:hover {
+.header ul a:hover {
   text-decoration: underline;
 }
 
@@ -157,6 +157,8 @@
   display: flex;
   margin: 0 20px;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .searchlink:first-child {
@@ -222,15 +224,25 @@
   display: none;
 }
 
-.dropdownmenu {
+.dropdownmenu,
+.submenu {
   width: 300px;
   background-color: var(--white);
   position: absolute;
-  top: 40px;
   z-index: 3;
   display: flex;
   box-sizing: border-box;
   overflow: visible;
+}
+
+.searchcontainer {
+  position: absolute;
+  top: 40px;
+}
+
+.submenu {
+  left: 300px;
+  border-left: 1px solid var(--gray);
 }
 
 .dropdowncont {
@@ -254,7 +266,7 @@
   max-height: calc(100vh - 176px);
 }
 
-.menulinks p {
+.menulinks button {
   padding: 10px 16px 10px 24px;
   font-weight: 300;
   margin: 0;
@@ -263,9 +275,13 @@
   width: 100%;
   display: inline-block;
   box-sizing: border-box;
+  background-color: transparent;
+  color: var(--black);
+  border: none;
+  text-align: left;
 }
 
-.menulinks p:hover {
+.menulinks button:hover {
   background-color: var(--gray);
   color: var(--blue);
 }
@@ -275,7 +291,7 @@
   padding: 10px 16px 10px 24px;
 }
 
-.menulinks p:first-child {
+.menulinks button:first-child {
   margin-top: 8px;
 }
 
@@ -283,7 +299,7 @@
   margin-top: 8px;
 }
 
-.menulinks p:last-child {
+.menulinks button:last-child {
   margin-bottom: 8px;
 }
 
@@ -292,6 +308,20 @@
   margin-top: 8px;
   height: 8px;
   background-color: var(--gray);
+}
+
+.submenubutton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submenuarrow {
+  width: 15px;
+  aspect-ratio: 1/1;
+}
+
+.submenubutton p {
+  margin: 0;
 }
 
 @media screen and (max-width: 1024px) {

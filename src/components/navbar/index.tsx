@@ -59,7 +59,7 @@ export default function Navbar(): ReactElement {
       <div className="header-content">
         <ul>
           {SecondaryLinks.map((o: string) => {
-            return <li key={o}>{o}</li>;
+            return <a key={o}>{o}</a>;
           })}
         </ul>
         <div className="header-mainrow">
@@ -118,10 +118,10 @@ export default function Navbar(): ReactElement {
           <div className="primarylink-container">
             {Object.values(PrimaryLinks).map((o) => {
               return (
-                <div key={o.title} className="primarylink desktop">
+                <a key={o.title} className="primarylink desktop">
                   <div className="primarylink-icon">{o.icon}</div>
                   <div className="primarylink-title">{o.title}</div>
-                </div>
+                </a>
               );
             })}
             {Object.values(PrimaryLinks).map((o) => {

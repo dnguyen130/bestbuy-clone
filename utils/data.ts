@@ -218,74 +218,116 @@ export const SearchLinks = {
       header: "What's Popular",
     },
     {
+      key: "topdeals",
       title: "Top Deals",
       link: "#",
     },
     {
+      key: "backtoschooldeals",
       title: "Back to School Deals",
       link: "#",
     },
     {
+      key: "samsunggalaxyzfold5andgalaxyzflip5",
       title: "Samsung Galaxy Z Fold5 and Galaxy Z Flip5",
       link: "#",
     },
     {
+      key: "samsunggalaxytabs9",
       title: "Samsung Galaxy Tab S9",
       link: "#",
     },
     {
+      key: "samsunggalaxywatch6andgalaxywatch6classic",
       title: "Samsung Galaxy Watch6 and Galaxy Watch6 Classic",
       link: "#",
     },
     {
+      key: "bestinclasswindowslaptops",
       title: "Best-in-Class Windows Laptops",
       link: "#",
     },
     {
+      key: "giftguide",
       title: "Gift Guide",
       link: "#",
+    },
+    {
       last: true,
     },
     {
+      key: "shopbycategory",
       header: "Shop by Category",
     },
     {
+      key: "computerstabletsaccessories",
       title: "Computers, Tablets & Accessories",
       link: "#",
     },
     {
+      key: "cellphonesandaccessories",
       title: "Cell Phones and Accessories",
       link: "#",
     },
     {
+      key: "officesuppliesandink",
       title: "Office Supplies & Ink",
       link: "#",
     },
-    { title: "TV & Home Theatre", link: "#" },
-    { title: "Headphones, Speakers, & Audio", link: "#" },
-    { title: "Cameras, Camcorders, & Drones", link: "#" },
-    { title: "Car Tech and GPS", link: "#" },
-    { title: "Appliances", link: "#" },
-    { title: "Smart Home", link: "#" },
-    { title: "Home Living", link: "#" },
-    { title: "Baby & Maternity", link: "#" },
-    { title: "Video Games & VR", link: "#" },
-    { title: "Wearable Technology", link: "#" },
-    { title: "Health & Fitness", link: "#" },
-    { title: "Sports, Recreation, & Transportation", link: "#" },
-    { title: "Movies & Music", link: "#" },
-    { title: "Musical Instruments & Equipment", link: "#" },
-    { title: "Toys, Games, & Education", link: "#" },
-    { title: "Beauty", link: "#" },
-    { title: "Personal Care", link: "#" },
-    { title: "Travel, Luggage, & Bags", link: "#" },
-    { title: "Watches, Jewelry, & Fashion", link: "#" },
-    { title: "Gift Cards", link: "#" },
+    { key: "tvandhometheatre", title: "TV & Home Theatre", link: "#" },
+    {
+      key: "headphonesspeakersandaudio",
+      title: "Headphones, Speakers, & Audio",
+      link: "#",
+    },
+    {
+      key: "camerascamcordersanddrones",
+      title: "Cameras, Camcorders, & Drones",
+      link: "#",
+    },
+    { key: "cartechandgps", title: "Car Tech and GPS", link: "#" },
+    { key: "appliances", title: "Appliances", link: "#" },
+    { key: "smarthome", title: "Smart Home", link: "#" },
+    { key: "homeliving", title: "Home Living", link: "#" },
+    { key: "babyandmaternity", title: "Baby & Maternity", link: "#" },
+    { key: "videogamesandvr", title: "Video Games & VR", link: "#" },
+    { key: "wearabletechnology", title: "Wearable Technology", link: "#" },
+    { key: "healthandfitness", title: "Health & Fitness", link: "#" },
+    {
+      key: "sportsrecreationandtransportation",
+      title: "Sports, Recreation, & Transportation",
+      link: "#",
+    },
+    { key: "moviesandmusic", title: "Movies & Music", link: "#" },
+    {
+      key: "musicalinstrumentsandequipment",
+      title: "Musical Instruments & Equipment",
+      link: "#",
+    },
+    {
+      key: "toysgamesandeducation",
+      title: "Toys, Games, & Education",
+      link: "#",
+    },
+    { key: "beauty", title: "Beauty", link: "#" },
+    { key: "personalcare", title: "Personal Care", link: "#" },
+    {
+      key: "travelluggageandbags",
+      title: "Travel, Luggage, & Bags",
+      link: "#",
+    },
+    {
+      key: "watchesjewelryandfashion",
+      title: "Watches, Jewelry, & Fashion",
+      link: "#",
+    },
+    { key: "giftcards", title: "Gift Cards", link: "#" },
   ],
   Brands: [
     {
       title: "Popular Brands",
       link: "#",
+      submenu: true,
     },
     {
       title: "A B",
@@ -366,6 +408,71 @@ export const SearchLinks = {
     {
       title: "Best Buy Health",
       link: "#",
+    },
+  ],
+};
+
+export const SubLinks = {
+  topdeals: [
+    {
+      key: "outdoorlivingonsale",
+      title: "Outdoor Living On Sale",
+    },
+    {
+      key: "sportsandrecreationonsale",
+      title: "Sports and Recreation On Sale",
+    },
+    {
+      key: "coolingandairqualityonsale",
+      title: "Cooling and Air Quality On Sale",
+    },
+    {
+      key: "smallkitchenappliancesonsale",
+      title: "Small Kitchen Appliances On Sale",
+    },
+    {
+      key: "portableaudioonsale",
+      title: "Portable Audio On Sale",
+    },
+    {
+      key: "laptopsonsale",
+      title: "Laptops On Sale",
+    },
+    {
+      key: "tvsandhometheatreonsale",
+      title: "TVs and Home Theatre On Sale",
+    },
+    {
+      key: "topsmartphonedeals",
+      title: "Top Smartphone Deals",
+    },
+    {
+      key: "unlockedphonesonsale",
+      title: "Unlocked Phones On Sale",
+    },
+    {
+      key: "wearabletechonsale",
+      title: "Wearable Tech On Sale",
+    },
+    {
+      key: "majorappliancedeals",
+      title: "Major Appliance Deals",
+    },
+    {
+      key: "smarthomeonsale",
+      title: "Smart Home On Sale",
+    },
+    {
+      key: "vacuumsonsale",
+      title: "Vacuums On Sale",
+    },
+    {
+      key: "videogamesandaccessoriesonsale",
+      title: "Video Games and Accessories On Sale",
+    },
+    {
+      key: "pcgamingonsale",
+      title: "PC Gaming On Sale",
     },
   ],
 };
