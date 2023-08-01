@@ -3,12 +3,13 @@ import { IoStorefront } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { BsCart3, BsSearch } from "react-icons/bs";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
 
 import SearchLink from "./searchlink";
+import TabletDropdownItem from "./tabletdropdownitem";
 import { SearchLinks } from "../../../utils/data";
 import { UseMyContext } from "../../../utils/provider";
 
@@ -274,8 +275,22 @@ export default function Navbar(): ReactElement {
                 <BsSearch size="40%" />
               </div>
             </div>
-            <div className="tabletdropdown">
-              <div className="tabletarrow" />
+            <div className="tabletdropdownwrapper">
+              <AnimatePresence>
+                {activeDropdown && (
+                  <motion.div
+                    className="tabletdropdown"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "100%", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                  >
+                    <div className="tabletarrow" />
+                    {Object.entries(SearchLinks).map(([key, value]) => {
+                      return <TabletDropdownItem title={key} />;
+                    })}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
         </div>

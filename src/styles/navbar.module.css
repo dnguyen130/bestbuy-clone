@@ -329,13 +329,17 @@
   margin-left: 12px;
 }
 
-.tabletdropdown {
-  background-color: white;
+.tabletdropdownwrapper {
   height: calc(100vh - 140px);
   width: 300px;
   position: absolute;
   top: 140px;
   left: 0;
+  display: none;
+}
+
+.tabletdropdown {
+  background-color: white;
 }
 
 .tabletarrow {
@@ -347,7 +351,15 @@
   left: 20px;
 }
 
+.tabletdropdownitemcont {
+  color: black;
+}
+
 @media screen and (max-width: 1024px) {
+  .tabletdropdownwrapper {
+    display: block;
+  }
+
   .header ul {
     padding: 8px 0 4px;
   }
