@@ -132,6 +132,15 @@ export const Carousel_1: CarouselItemType[] = [
 
 //Footer Links
 
+export const FooterLinks = [
+  { key: "CustomerSupport", title: "Customer Support" },
+  { key: "Account", title: "Account" },
+  { key: "Services", title: "Services" },
+  { key: "Aboutus", title: "About Us" },
+  { key: "Internationalsites", title: "International Sites" },
+  { key: "Mobileapps", title: "Mobile Apps" },
+];
+
 export const CustomerSupport = {
   title: "Customer Support",
   links: [

@@ -12,6 +12,7 @@ import {
   Mobileapps,
 } from "../../../utils/data";
 import BottomBar from "./bottom";
+import FooterAccordion from "./accordion";
 
 export default function Footer(): ReactElement {
   return (
@@ -33,6 +34,7 @@ export default function Footer(): ReactElement {
           />
           <FooterLinks title={Mobileapps.title} links={Mobileapps.links} />
         </div>
+        <FooterAccordion />
         <Socials />
       </div>
       <BottomBar />

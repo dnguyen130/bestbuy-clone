@@ -1,6 +1,6 @@
-.carouselcard {
+.carouselcard,
+.carouselcarddark {
   height: 416px;
-  background-color: var(--gray);
   margin-bottom: 64px;
   border-radius: 8px;
   padding: 24px 60px 12px 24px;
@@ -9,22 +9,18 @@
   position: relative;
   justify-content: space-between;
   max-width: 1280px;
+}
+
+.carouselcard {
+  background-color: var(--gray);
 }
 
 .carouselcarddark {
-  height: 416px;
   background-color: var(--blue);
-  margin-bottom: 64px;
-  border-radius: 8px;
-  padding: 24px 60px 12px 24px;
-  display: flex;
-  flex: none;
-  position: relative;
-  justify-content: space-between;
-  max-width: 1280px;
 }
 
-.textside {
+.textside,
+.textsidedark {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -33,27 +29,15 @@
 }
 
 .textsidedark {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 30%;
   color: var(--white);
-  padding-right: 50px;
 }
 
-.textside h2 {
-  margin: 10px 0 0 0;
-}
-
-.textside p {
-  margin: 10px 0;
-  font-weight: 300;
-}
-
+.textside h2,
 .textsidedark h2 {
   margin: 10px 0 0 0;
 }
 
+.textside p,
 .textsidedark p {
   margin: 10px 0;
   font-weight: 300;
@@ -63,18 +47,6 @@
   display: block;
   max-width: 600px;
   width: 70%;
-}
-
-@media screen and (max-width: 1024px) {
-  .carouselcont {
-    max-width: 500px;
-    width: 60%;
-  }
-
-  .textside,
-  .textsidedark {
-    width: 40%;
-  }
 }
 
 .carouselitem {
@@ -226,4 +198,43 @@
 
 .carouselcarddark .carouselcont .slick-slider .slick-dots li button::before {
   color: var(--white) !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .carouselcont {
+    max-width: 500px;
+    width: 60%;
+  }
+
+  .textside,
+  .textsidedark {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carouselcard,
+  .carouselcarddark {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    padding: 24px 16px 32px;
+  }
+  .carouselcont {
+    max-width: none;
+    width: 100%;
+  }
+
+  .textside,
+  .textsidedark {
+    max-width: none;
+    width: 100%;
+  }
+
+  .slick-next:before,
+  .slick-prev:before,
+  .slick-arrow {
+    /* color: black !important; */
+    display: none !important;
+  }
 }

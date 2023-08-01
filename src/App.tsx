@@ -20,23 +20,19 @@ import { UseMyContext } from "../utils/provider.tsx";
 
 export const IconLinkList = [
   {
-    description1: "Quick and Easy",
-    description2: "Store Pickup",
+    description: "Quick and Easy Store Pickup",
     icon: <TbClockBolt size="100%" />,
   },
   {
-    description1: "Free shipping",
-    description2: "over $35",
+    description: "Free shipping over $35",
     icon: <FaTruckFast size="100%" />,
   },
   {
-    description1: "Low Price",
-    description2: "Guarantee",
+    description: "Low Price Guarantee",
     icon: <AiOutlineDollar size="100%" />,
   },
   {
-    description1: "Latest and",
-    description2: "Greatest Tech",
+    description: "Latest and Greatest Tech",
     icon: <BsStars size="100%" />,
   },
 ];
@@ -108,13 +104,7 @@ function App() {
       <footer>
         <div className="linkcont">
           {IconLinkList.map((o) => {
-            return (
-              <QuickLink
-                icon={o.icon}
-                description1={o.description1}
-                description2={o.description2}
-              />
-            );
+            return <QuickLink icon={o.icon} description={o.description} />;
           })}
         </div>
         <Footer />
