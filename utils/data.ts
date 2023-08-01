@@ -133,12 +133,115 @@ export const Carousel_1: CarouselItemType[] = [
 //Footer Links
 
 export const FooterLinks = [
-  { key: "CustomerSupport", title: "Customer Support" },
-  { key: "Account", title: "Account" },
-  { key: "Services", title: "Services" },
-  { key: "Aboutus", title: "About Us" },
-  { key: "Internationalsites", title: "International Sites" },
-  { key: "Mobileapps", title: "Mobile Apps" },
+  {
+    key: "CustomerSupport",
+    title: "Customer Support",
+    links: [
+      {
+        key: "contactus",
+        title: "Contact Us",
+        link: "#",
+      },
+      {
+        key: "helpcentre",
+        title: "Help Centre",
+        link: "#",
+      },
+      {
+        key: "returnsandexchanges",
+        title: "Returns & Exchanges",
+        link: "#",
+      },
+      {
+        key: "bestbuyfinancing",
+        title: "Best Buy Financing",
+        link: "#",
+      },
+      {
+        key: "bestbuygiftcard",
+        title: "Best Buy Gift Card",
+        link: "#",
+      },
+    ],
+  },
+  {
+    key: "Account",
+    title: "Account",
+    links: [
+      { key: "orderstatus", title: "Order Status", link: "#" },
+      { key: "manageaccount", title: "Manage Account", link: "#" },
+      { key: "emailpreferences", title: "Email Preferences", link: "#" },
+    ],
+  },
+  {
+    key: "Services",
+    title: "Services",
+    links: [
+      { key: "geeksquad", title: "Geek Squad", link: "#" },
+      { key: "tradeinprogram", title: "Trade-In Program", link: "#" },
+      {
+        key: "electronicsrecycling",
+        title: "Electronics Recycling",
+        link: "#",
+      },
+      { key: "bestbuyhealth", title: "Best Buy Health", link: "#" },
+    ],
+  },
+  {
+    key: "Aboutus",
+    title: "About Us",
+    links: [
+      { key: "careers", title: "Careers", link: "#" },
+      {
+        key: "corporateinformation",
+        title: "Corporate Information",
+        link: "#",
+      },
+      {
+        key: "aboutbestbuymarketplace",
+        title: "About Best Buy Marketplace",
+        link: "#",
+      },
+      {
+        key: "sellonbestbuymarketplace",
+        title: "Sell on Best Buy Marketplace",
+        link: "#",
+      },
+      {
+        key: "bestbuyaffiliateprogram",
+        title: "Best Buy Affiliate Program",
+        link: "#",
+      },
+      {
+        key: "advertisewithbestbuy",
+        title: "Advertise with Best Buy",
+        link: "#",
+      },
+    ],
+  },
+  {
+    key: "Internationalsites",
+    title: "International Sites",
+    links: [{ key: "bestbuyus", title: "Best Buy US", link: "#" }],
+  },
+  {
+    key: "Mobileapps",
+    title: "Mobile Apps",
+    links: [
+      {
+        key: "android",
+        icon: "android",
+        title: "Android App",
+        link: "#",
+      },
+      {
+        key: "ios",
+        icon: "ios",
+        title: "iOS App",
+        link: "#",
+      },
+    ],
+  },
 ];
 
 export const CustomerSupport = {

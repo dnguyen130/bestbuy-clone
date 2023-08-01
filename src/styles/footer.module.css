@@ -47,7 +47,7 @@
 
 .linkswrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 70%;
   margin-left: 0;
@@ -191,15 +191,25 @@
   display: flex;
   font-size: 10px;
   font-weight: 300;
+  flex-wrap: wrap;
 }
 
 .bottomcont li {
-  padding: 0 10px 0;
-  border-right: 1px solid var(--darkgray);
-  height: 10px;
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-right: 8px;
+  line-height: 24px;
+}
+
+.bottomcont li::before {
+  color: #1d252c;
+  content: "|";
+  padding-right: 8px;
+}
+
+.bottomcont li:first-child::before {
+  display: none;
 }
 
 .bottomcont li:hover {
@@ -216,18 +226,16 @@
 
 .footeraccordion {
   width: 100%;
+  display: none;
 }
 
 .accordionpiece {
-  padding: 16px;
   width: 100%;
   border: none;
   background-color: transparent;
   color: var(--black);
   text-align: left;
   border-bottom: 1px solid var(--hovergray);
-  display: flex;
-  justify-content: space-between;
 }
 
 .accordionpiece p {
@@ -239,9 +247,78 @@
   aspect-ratio: 1/1;
 }
 
+.accordionheader {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.accordionsubcont {
+  padding: 0 16px;
+}
+
+.subarray {
+  padding: 0 16px;
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 16px;
+  width: auto;
+}
+
+.subarray a {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.subarray a:hover {
+  color: var(--blue);
+}
+
+.subarray:last-child {
+  margin-bottom: 0;
+}
+
+.subarraycont {
+  padding-bottom: 16px;
+  overflow: hidden;
+}
+
+.arrayicon {
+  margin-right: 5px;
+  width: 20px;
+}
+
 @media screen and (max-width: 1024px) {
   .quicklink h2 {
     max-width: 140px;
+  }
+
+  .footercont {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .socialscont {
+    width: 100%;
+    border-top: 1px solid var(--searchgray);
+    border-left: none;
+    padding: 24px 0;
+  }
+
+  .socialscont .form {
+    max-width: 360px;
+  }
+
+  .socialscont ul {
+    max-width: 360px;
+  }
+
+  .linkswrapper {
+    width: 100%;
   }
 }
 
@@ -291,5 +368,9 @@
   .linkswrapper {
     width: 100%;
     display: none;
+  }
+
+  .footeraccordion {
+    display: block;
   }
 }
