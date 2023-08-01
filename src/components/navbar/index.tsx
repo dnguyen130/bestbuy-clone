@@ -274,6 +274,9 @@ export default function Navbar(): ReactElement {
                 <BsSearch size="40%" />
               </div>
             </div>
+            <div className="tabletdropdown">
+              <div className="tabletarrow" />
+            </div>
           </div>
         </div>
       </div>

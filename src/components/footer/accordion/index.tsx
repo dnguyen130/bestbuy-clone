@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 import AccordionPiece from "./accordionpiece";
 
 import { FooterLinks } from "../../../../utils/data";
