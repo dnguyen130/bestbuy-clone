@@ -324,6 +324,10 @@
   margin: 0;
 }
 
+.long {
+  margin-left: 12px;
+}
+
 @media screen and (max-width: 1024px) {
   .header ul {
     padding: 8px 0 4px;

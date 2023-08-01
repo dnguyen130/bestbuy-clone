@@ -89,6 +89,7 @@
   padding: 16px;
   box-sizing: border-box;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .carouselitem img {

@@ -46,3 +46,10 @@
 .productcont a {
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .productboxgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

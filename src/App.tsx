@@ -1,5 +1,6 @@
 import Navbar from "./components/navbar";
 import FeatureGrid from "./components/featuregrid";
+import FeatureCarousel from "./components/featurecarousel";
 import HottestOffers from "./components/hottestoffers";
 import PicksGrid from "./components/picks";
 import CategoriesGrid from "./components/categories";
@@ -69,7 +70,12 @@ function App() {
       </AnimatePresence>
       <main>
         <div className="margin">
-          <FeatureGrid />
+          <div className="showgrid">
+            <FeatureGrid />
+          </div>
+          <div className="showcarousel">
+            <FeatureCarousel />
+          </div>
           <HottestOffers />
           <PicksGrid />
           <CategoriesGrid />

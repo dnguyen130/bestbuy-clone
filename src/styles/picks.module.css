@@ -9,20 +9,27 @@
 .picksgrid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 16px;
+  gap: 24px;
   justify-items: center;
+  align-items: center;
+}
+
+.picksgrid div {
+  width: 100%;
 }
 
 .pickscont a {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  width: 100%;
 }
 
 .pickscont img {
   aspect-ratio: 1/1;
   align-self: center;
   max-width: 110px;
+  width: 100%;
 }
 
 .pickstitle {
@@ -35,4 +42,19 @@
 
 .spacedrow {
   margin-bottom: 48px;
+}
+
+@media screen and (max-width: 1024px) {
+  .pickscont img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .picksgrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .pickscont img {
+    width: 70%;
+  }
 }

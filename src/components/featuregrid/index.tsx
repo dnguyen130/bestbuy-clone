@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-export default function FeatureGrid(): ReactElement {
+export default function FeatureCarousel(): ReactElement {
   return (
     <div className="featuregrid">
       <div className="gridelement">
