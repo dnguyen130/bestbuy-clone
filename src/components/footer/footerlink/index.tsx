@@ -23,7 +23,7 @@ export default function FooterLinks({
         <ul>
           {Object.values(links).map((o) => {
             return (
-              <div className="row">
+              <div className="row" key={o.title}>
                 <div className="icon">
                   {o.icon === "android" && <AiFillAndroid />}
                   {o.icon === "ios" && <AiFillApple />}
@@ -41,7 +41,7 @@ export default function FooterLinks({
         <h3>{title}</h3>
         <ul>
           {Object.values(links).map((o) => {
-            return <li>{o.title}</li>;
+            return <li key={o.title}>{o.title}</li>;
           })}
         </ul>
       </div>

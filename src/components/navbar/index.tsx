@@ -13,6 +13,11 @@ import TabletDropdownItem from "./tabletdropdownitem";
 import { SearchLinks } from "../../../utils/data";
 import { UseMyContext } from "../../../utils/provider";
 
+import { FiMonitor } from "react-icons/fi";
+import { TiSortAlphabetically } from "react-icons/ti";
+import { BiSolidBadgeDollar } from "react-icons/bi";
+import { FaWrench } from "react-icons/fa";
+
 interface PrimaryLinkType {
   title: string;
   icon: JSX.Element;
@@ -38,6 +43,41 @@ const PrimaryLinks: Record<string, PrimaryLinkType> = {
     title: "Cart",
     icon: <BsCart3 size="100%" />,
   },
+};
+
+const IconList = [
+  { title: "Shop", icon: <FiMonitor size="100%" /> },
+  { title: "Brands", icon: <TiSortAlphabetically size="100%" /> },
+  { title: "Deals", icon: <BiSolidBadgeDollar size="100%" /> },
+  { title: "Services", icon: <FaWrench size="100%" /> },
+];
+
+const SecondListLinks = [
+  {
+    title: "Order Status",
+    link: "#",
+  },
+  {
+    title: "Blog",
+    link: "#",
+  },
+  {
+    title: "Best Buy Business",
+    link: "#",
+  },
+  {
+    title: "Français",
+    link: "#",
+  },
+];
+
+const CalcIcon = (key: string): ReactElement => {
+  for (let i = 0; i < IconList.length; i++) {
+    if (key === IconList[i].title) {
+      return IconList[i].icon;
+    }
+  }
+  return <></>;
 };
 
 export default function Navbar(): ReactElement {
@@ -154,6 +194,31 @@ export default function Navbar(): ReactElement {
             })}
           </div>
           <div className="mobilesearchgroup">
+            <div className="mobiledropdownwrapper">
+              <AnimatePresence>
+                {activeDropdown && (
+                  <motion.div
+                    className="tabletdropdown"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "100%", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                    }}
+                  >
+                    <div className="tabletarrow" />
+                    {Object.entries(SearchLinks).map(([key, value]) => {
+                      return (
+                        <TabletDropdownItem title={key} icon={CalcIcon(key)} />
+                      );
+                    })}
+                    {SecondListLinks.map((o) => {
+                      return <a className="secondlistlinks">{o.title}</a>;
+                    })}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             <div
               className="searchmenu"
               style={{
@@ -283,10 +348,18 @@ export default function Navbar(): ReactElement {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "100%", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                    }}
                   >
                     <div className="tabletarrow" />
                     {Object.entries(SearchLinks).map(([key, value]) => {
-                      return <TabletDropdownItem title={key} />;
+                      return (
+                        <TabletDropdownItem title={key} icon={CalcIcon(key)} />
+                      );
+                    })}
+                    {SecondListLinks.map((o) => {
+                      return <a className="secondlistlinks">{o.title}</a>;
                     })}
                   </motion.div>
                 )}

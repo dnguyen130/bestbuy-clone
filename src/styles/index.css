@@ -128,6 +128,7 @@ footer {
   padding: 24px 64px;
   box-sizing: border-box;
   margin-right: 20px;
+  box-shadow: 0 16px 24px -8px rgba(0, 0, 0, 0.15);
 }
 
 .slick-track {

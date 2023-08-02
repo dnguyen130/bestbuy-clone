@@ -104,7 +104,11 @@ function App() {
       <footer>
         <div className="linkcont">
           {IconLinkList.map((o) => {
-            return <QuickLink icon={o.icon} description={o.description} />;
+            return (
+              <div className="quicklinkcont" key={o.description}>
+                <QuickLink icon={o.icon} description={o.description} />
+              </div>
+            );
           })}
         </div>
         <Footer />

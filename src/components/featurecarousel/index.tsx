@@ -7,32 +7,14 @@ const settings = {
   speed: 500,
   variableWidth: true,
   slidesToScroll: 1,
-  // responsive: [
-  //   {
-  //     breakpoint: 1000,
-  //     settings: {
-  //       slidesToShow: 1.2,
-  //     },
-  //   },
-  //   // {
-  //   //   breakpoint: 910,
-  //   //   settings: {
-  //   //     slidesToShow: 1.1,
-  //   //   },
-  //   // },
-  //   // {
-  //   //   breakpoint: 800,
-  //   //   settings: {
-  //   //     slidesToShow: 1.05,
-  //   //   },
-  //   // },
-  //   {
-  //     breakpoint: 768,
-  //     settings: {
-  //       slidesToShow: 2.5,
-  //     },
-  //   },
-  // ],
+};
+
+const FeaturedSlides = {
+  title: "Save on more tech you'll love",
+  buttonText: "Shop outlet deals",
+  bgColor: "#f4f6fa",
+  buttoncolor: "#003da6",
+  picture: "/product1.webp",
 };
 
 export default function FeatureCarousel(): ReactElement {

@@ -331,12 +331,15 @@
     display: flex;
   }
 
-  .quicklink {
+  .quicklinkcont {
     margin-bottom: 32px;
+  }
+
+  .quicklink {
     padding-right: 0;
   }
 
-  .quicklink:last-child {
+  .quicklinkcont:last-child {
     margin-bottom: 0;
   }
 

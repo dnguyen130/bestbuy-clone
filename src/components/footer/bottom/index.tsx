@@ -50,7 +50,7 @@ export default function BottomBar(): ReactElement {
       </p>
       <ul>
         {BottomLinks.map((o) => {
-          return <li>{o.title}</li>;
+          return <li key={o.title}>{o.title}</li>;
         })}
       </ul>
     </div>

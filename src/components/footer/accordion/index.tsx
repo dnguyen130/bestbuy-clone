@@ -19,11 +19,13 @@ export default function FooterAccordion(): ReactElement {
     <div className="footeraccordion">
       {FooterLinks.map((o) => {
         return (
-          <AccordionPiece
-            title={o.title}
-            key={o.key}
-            subarray={CalcSubMenu(o.key)}
-          />
+          <div key={o.key}>
+            <AccordionPiece
+              title={o.title}
+              key={o.key}
+              subarray={CalcSubMenu(o.key)}
+            />
+          </div>
         );
       })}
     </div>
