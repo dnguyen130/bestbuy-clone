@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 import { BiSolidShoppingBags } from "react-icons/bi";
+import { SwiperSlide } from "swiper/react";
 
 const StarCalc = (rating: number) => {
   const array: string[] = [];
@@ -40,7 +41,7 @@ export default function CarouselItem({
   ehf,
 }: CarouselItemType): ReactElement {
   return (
-    <div className="carouselitem">
+    <SwiperSlide className="carouselitem">
       <img src={image} />
       <div className="carouseltext">
         <p className="itemname">{name}</p>
@@ -66,6 +67,6 @@ export default function CarouselItem({
         )}
         {ehf && <p className="itemehf">Plus ${ehf} EHF</p>}
       </div>
-    </div>
+    </SwiperSlide>
   );
 }

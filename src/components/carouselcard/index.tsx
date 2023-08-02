@@ -31,6 +31,7 @@ export default function CarouselCard({
       </div>
       <div className="carouselcont">
         <CarouselComponent CarouselArray={CarouselArray} />
+        <div className="custom-featured-pagination2" />
       </div>
     </div>
   );

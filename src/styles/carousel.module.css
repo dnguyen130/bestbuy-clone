@@ -200,6 +200,35 @@
   color: var(--white) !important;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: var(--blue) !important;
+}
+
+.swiper-pagination {
+  bottom: -10px !important;
+}
+
+.custom-featured-pagination {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.custom-pagination {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselarrows {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
 @media screen and (max-width: 1024px) {
   .carouselcont {
     max-width: 500px;

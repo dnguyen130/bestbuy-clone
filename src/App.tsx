@@ -71,6 +71,7 @@ function App() {
           </div>
           <div className="showcarousel">
             <FeatureCarousel />
+            <div className="custom-featured-pagination" />
           </div>
           <HottestOffers />
           <PicksGrid />

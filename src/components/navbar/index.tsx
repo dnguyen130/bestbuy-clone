@@ -194,9 +194,9 @@ export default function Navbar(): ReactElement {
             })}
           </div>
           <div className="mobilesearchgroup">
-            <div className="mobiledropdownwrapper">
-              <AnimatePresence>
-                {activeDropdown && (
+            <AnimatePresence>
+              {activeDropdown && (
+                <div className="mobiledropdownwrapper">
                   <motion.div
                     className="tabletdropdown"
                     initial={{ height: 0, opacity: 0 }}
@@ -216,9 +216,9 @@ export default function Navbar(): ReactElement {
                       return <a className="secondlistlinks">{o.title}</a>;
                     })}
                   </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+                </div>
+              )}
+            </AnimatePresence>
             <div
               className="searchmenu"
               style={{

@@ -1,41 +1,77 @@
 import { ReactElement } from "react";
-import Slider from "react-slick";
-import CarouselItem from "../carouselitem";
 import { CarouselItemType } from "../carouselitem";
+import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
+import { BiSolidShoppingBags } from "react-icons/bi";
 
-const settings = {
-  dots: true,
-  infinite: false,
-  speed: 500,
-  slidesToScroll: 3,
-  variableWidth: true,
-};
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 interface CarouselComponentType {
   CarouselArray: CarouselItemType[];
 }
 
+const StarCalc = (rating: number) => {
+  const array: string[] = [];
+  for (let i = 0; i < 5; i++) {
+    if (i < rating && i == 4) {
+      array.push("full");
+    } else if (i < rating && i + 1 < rating) {
+      array.push("full");
+    } else if (i < rating && i + 1 > rating) {
+      array.push("half");
+    } else {
+      array.push("empty");
+    }
+  }
+  return array;
+};
+
 export default function CarouselComponent({
   CarouselArray,
 }: CarouselComponentType): ReactElement {
   return (
-    <Slider {...settings}>
+    <Swiper
+      slidesPerView="auto"
+      pagination={{ el: ".custom-featured-pagination2", clickable: true }}
+      navigation
+      modules={[Pagination, Navigation]}
+    >
       {Object.values(CarouselArray).map((o) => {
         return (
-          <div key={o.name}>
-            <CarouselItem
-              image={o.image}
-              rating={o.rating}
-              name={o.name}
-              reviews={o.reviews}
-              saveAmount={o.saveAmount}
-              price={o.price}
-              isMarketplace={o.isMarketplace}
-              ehf={o.ehf}
-            />
-          </div>
+          <SwiperSlide className="carouselitem">
+            <img src={o.image} />
+            <div className="carouseltext">
+              <p className="itemname">{o.name}</p>
+              <div className="carouselrating">
+                {StarCalc(o.rating).map((o, i) => {
+                  if (o === "full") {
+                    return <BsStarFill key={i} className="starfill" />;
+                  } else if (o === "half") {
+                    return <BsStarHalf key={i} className="starfill" />;
+                  } else {
+                    return <BsStar key={i} className="star" />;
+                  }
+                })}
+              </div>
+              <p className="itemreview">({o.reviews} Reviews)</p>
+              {o.saveAmount && <p className="itemsale">SAVE ${o.saveAmount}</p>}
+              <p className={o.saveAmount ? "itempricesale" : "itemprice"}>
+                ${o.price}
+              </p>
+              {o.isMarketplace && (
+                <div className="itemmarketplace">
+                  <BiSolidShoppingBags className="marketicon" size="100%" />
+                  <p>Marketplace seller</p>
+                </div>
+              )}
+              {o.ehf && <p className="itemehf">Plus ${o.ehf} EHF</p>}
+            </div>
+          </SwiperSlide>
         );
       })}
-    </Slider>
+    </Swiper>
   );
 }

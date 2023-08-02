@@ -339,6 +339,7 @@
 
 .tabletdropdown {
   background-color: var(--gray);
+  overflow: hidden;
 }
 
 .tabletarrow {
