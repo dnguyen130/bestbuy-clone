@@ -207,7 +207,7 @@ export default function Navbar(): ReactElement {
                     }}
                   >
                     <div className="tabletarrow" />
-                    {Object.entries(SearchLinks).map(([key, value]) => {
+                    {Object.entries(SearchLinks).map(([key]) => {
                       return (
                         <TabletDropdownItem title={key} icon={CalcIcon(key)} />
                       );
@@ -353,7 +353,7 @@ export default function Navbar(): ReactElement {
                     }}
                   >
                     <div className="tabletarrow" />
-                    {Object.entries(SearchLinks).map(([key, value]) => {
+                    {Object.entries(SearchLinks).map(([key]) => {
                       return (
                         <TabletDropdownItem title={key} icon={CalcIcon(key)} />
                       );

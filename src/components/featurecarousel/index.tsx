@@ -9,13 +9,13 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const FeaturedSlides = {
-  title: "Save on more tech you'll love",
-  buttonText: "Shop outlet deals",
-  bgColor: "#f4f6fa",
-  buttoncolor: "#003da6",
-  picture: "/product1.webp",
-};
+// const FeaturedSlides = {
+//   title: "Save on more tech you'll love",
+//   buttonText: "Shop outlet deals",
+//   bgColor: "#f4f6fa",
+//   buttoncolor: "#003da6",
+//   picture: "/product1.webp",
+// };
 
 export default function FeatureCarousel(): ReactElement {
   return (
