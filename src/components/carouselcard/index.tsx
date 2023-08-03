@@ -1,9 +1,11 @@
 import { ReactElement } from "react";
 import CarouselComponent from "./carousel";
 import { CarouselItemType } from "./carouselitem";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 interface CarouselCardType {
   CarouselArray: CarouselItemType[];
+  CarouselNumber: string;
   banner: string;
   dark: boolean;
   header: string;
@@ -13,6 +15,7 @@ interface CarouselCardType {
 
 export default function CarouselCard({
   CarouselArray,
+  CarouselNumber,
   banner,
   dark,
   header,
@@ -30,8 +33,21 @@ export default function CarouselCard({
         </button>
       </div>
       <div className="carouselcont">
-        <CarouselComponent CarouselArray={CarouselArray} />
-        <div className="custom-featured-pagination2" />
+        <div className={`custom-prev-nav${CarouselNumber} custom-prev-nav`}>
+          <div className="arrow-circle" />
+          <BsChevronLeft size="100%" style={{ zIndex: 10 }} />
+        </div>
+        <CarouselComponent
+          CarouselArray={CarouselArray}
+          CarouselNumber={CarouselNumber}
+        />
+        <div className={`custom-next-nav${CarouselNumber} custom-next-nav`}>
+          <div className="arrow-circle" />
+          <BsChevronRight size="100%" style={{ zIndex: 10 }} />
+        </div>
+        <div
+          className={`custom-pagination${CarouselNumber} custom-pagination`}
+        />
       </div>
     </div>
   );

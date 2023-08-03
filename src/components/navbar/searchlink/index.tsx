@@ -42,12 +42,12 @@ export default function SearchLink({
       <AnimatePresence>
         {active && (
           <motion.div
-            initial={{ height: 200, opacity: 0 }}
+            initial={{ height: 100, opacity: 0 }}
             animate={{
               height: "auto",
               opacity: 1,
             }}
-            exit={{ height: 200, opacity: 0 }}
+            exit={{ height: 100, opacity: 0 }}
             className="dropdownmenu"
             onClick={(e) => e.stopPropagation()}
           >

@@ -281,6 +281,7 @@ export default function Navbar(): ReactElement {
               style={{
                 width: searchFocus ? 60 : 0,
                 opacity: searchFocus ? 1 : 0,
+                padding: searchFocus ? "0 5px 0 10px" : 0,
               }}
             >
               Cancel

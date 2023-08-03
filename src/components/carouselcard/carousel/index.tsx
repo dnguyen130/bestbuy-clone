@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 
 interface CarouselComponentType {
   CarouselArray: CarouselItemType[];
+  CarouselNumber: string;
 }
 
 const StarCalc = (rating: number) => {
@@ -31,12 +32,33 @@ const StarCalc = (rating: number) => {
 
 export default function CarouselComponent({
   CarouselArray,
+  CarouselNumber,
 }: CarouselComponentType): ReactElement {
   return (
     <Swiper
       slidesPerView="auto"
-      pagination={{ el: ".custom-featured-pagination2", clickable: true }}
-      navigation
+      breakpoints={{
+        400: {
+          slidesPerGroup: 2,
+        },
+        768: {
+          slidesPerGroup: 2,
+        },
+        1024: {
+          slidesPerGroup: 3,
+        },
+        1200: {
+          slidesPerGroup: 3,
+        },
+      }}
+      pagination={{
+        el: `.custom-pagination${CarouselNumber}`,
+        clickable: true,
+      }}
+      navigation={{
+        prevEl: `.custom-prev-nav${CarouselNumber}`,
+        nextEl: `.custom-next-nav${CarouselNumber}`,
+      }}
       modules={[Pagination, Navigation]}
     >
       {Object.values(CarouselArray).map((o) => {

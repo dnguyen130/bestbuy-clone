@@ -83,6 +83,7 @@ function App() {
             header="Save big on outlet tech."
             subheader="Experience outstanding deals on refurbished and open box products."
             buttontext="Shop Deals"
+            CarouselNumber="1"
           />
           <CarouselCard
             banner="banner/marketplace.png"
@@ -91,6 +92,7 @@ function App() {
             header="Save big on outlet tech."
             subheader="Experience outstanding deals on refurbished and open box products."
             buttontext="Shop Deals"
+            CarouselNumber="2"
           />
           <CarouselCard
             banner="banner/star.png"
@@ -99,6 +101,7 @@ function App() {
             header="Latest and Greatest Tech."
             subheader="Check out the latest product launches and get inspired by the tech of tomorrow."
             buttontext="Explore Latest and Greatest Tech"
+            CarouselNumber="3"
           />
         </div>
       </main>
